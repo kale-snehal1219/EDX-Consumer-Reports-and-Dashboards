@@ -1,0 +1,152 @@
+<!-- partials/sidebar-steward.html — Data Steward governance workspace
+     Functional structure:
+     - 10 logical Data Steward screens.
+     - Catalog & Glossary is the single semantic/catalog authority.
+     - Promotion Governance is the single promotion authority.
+     - Data Engineer supplies technical execution evidence; Steward never executes pipelines/runs/replay.
+     - Platform Admin supplies taxonomy/purpose/masking/retention definitions; Steward applies/reviews them without mutating provider policy definitions.
+     - Tenant Admin administration remains separate from Steward governed-data decisions.
+-->
+<nav id="sidebarNav"
+     class="d-flex flex-column flex-shrink-0 p-3 border-end bg-body"
+     role="navigation"
+     aria-label="Data Steward navigation">
+
+  <ul class="nav nav-pills flex-column mb-auto" id="sidebarNavList">
+
+    <!-- Home -->
+    <li class="nav-item">
+      <a href="../steward/landing.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Data Steward Home">
+        <i class="bi bi-house-door me-2" aria-hidden="true"></i>
+        Data Steward Home
+      </a>
+    </li>
+
+    <!-- Approvals & Governance -->
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">
+      Approvals &amp; Governance
+    </li>
+    <li>
+      <a href="../steward/approvals-queue.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Approvals Queue">
+        <i class="bi bi-inboxes me-2" aria-hidden="true"></i>
+        Approvals Queue
+      </a>
+    </li>
+    <li>
+      <a href="../steward/promotion-governance.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Promotion Governance">
+        <i class="bi bi-arrow-up-right-circle me-2" aria-hidden="true"></i>
+        Promotion Governance
+      </a>
+    </li>
+
+    <!-- Data Quality -->
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">
+      Data Quality
+    </li>
+    <li>
+      <a href="../steward/dq-rules.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Data Quality Rules">
+        <i class="bi bi-clipboard-check me-2" aria-hidden="true"></i>
+        Data Quality Rules
+      </a>
+    </li>
+    <li>
+      <a href="../steward/dq-quality-review.html"
+         class="nav-link link-body-emphasis"
+         aria-label="DQ Certification and Independent Review">
+        <i class="bi bi-patch-check me-2" aria-hidden="true"></i>
+        DQ Certification
+      </a>
+    </li>
+    <li>
+      <a href="../steward/data-validation.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Quality Review and Drift">
+        <i class="bi bi-graph-down-arrow me-2" aria-hidden="true"></i>
+        Quality Review &amp; Drift
+      </a>
+    </li>
+
+    <li>
+      <a href="../steward/dq-owner-returns.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Owner Reassessment and Evidence">
+        <i class="bi bi-person-check me-2" aria-hidden="true"></i>
+        Owner Reassessment &amp; Evidence
+      </a>
+    </li>
+
+    <!-- Catalog & Classification -->
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">
+      Catalog &amp; Classification
+    </li>
+    <li>
+      <a href="../steward/catalog-glossary.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Catalog and Glossary">
+        <i class="bi bi-collection me-2" aria-hidden="true"></i>
+        Catalog &amp; Glossary
+      </a>
+    </li>
+    <li>
+      <a href="../steward/dataset-tagging.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Dataset Classification and Tagging">
+        <i class="bi bi-tags me-2" aria-hidden="true"></i>
+        Dataset Classification &amp; Tagging
+      </a>
+    </li>
+
+    <!-- Policy Review -->
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">
+      Policy Review
+    </li>
+    <li>
+      <a href="../steward/policy-simulator.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Policy Impact Simulator">
+        <i class="bi bi-shield-lock me-2" aria-hidden="true"></i>
+        Policy Impact Simulator
+      </a>
+    </li>
+
+    <!-- Shares & Exports -->
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">
+      Shares &amp; Exports
+    </li>
+    <li>
+      <a href="../steward/data-shares.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Data Share Governance">
+        <i class="bi bi-box-arrow-up-right me-2" aria-hidden="true"></i>
+        Data Share Governance
+      </a>
+    </li>
+    <li>
+      <a href="../steward/export-requests.html"
+         class="nav-link link-body-emphasis"
+         aria-label="Export Approvals">
+        <i class="bi bi-send-check me-2" aria-hidden="true"></i>
+        Export Approvals
+      </a>
+    </li>
+
+  </ul>
+
+  <hr>
+
+  <div class="edx-role-summary text-body-secondary small mt-auto">
+    <div class="fw-semibold text-body">Data Steward</div>
+    <div>
+      Business quality · semantic governance · classification review ·
+      promotion decisions · policy impact review · share &amp; export governance
+    </div>
+  </div>
+</nav>

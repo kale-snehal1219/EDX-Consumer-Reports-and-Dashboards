@@ -1,0 +1,1556 @@
+{
+  "schemaVersion": "1.0",
+  "wave": "P1-WAVE-10-ADAPTER-INTEGRATION",
+  "date": "2026-09-25",
+  "routeCount": 78,
+  "rules": {
+    "startup": "Readiness is READY only when all startupAllOf adapters and at least one adapter in each startupAnyOf group are explicitly registered.",
+    "operation": "Operation adapters are reported separately; screens continue to fail closed at the point of action if they are absent.",
+    "registration": "A browser-local functional-contract authority does not count unless it is explicitly registered as a production adapter or bound by the capability-declared Production Gateway."
+  },
+  "routes": [
+    {
+      "route": "/pages/admin/audit-logs.html",
+      "workspace": "admin",
+      "physicalScreen": "audit-logs",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [
+        "EDXAuditExportAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXAuditExportAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/billing.html",
+      "workspace": "admin",
+      "physicalScreen": "billing",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ],
+        [
+          "EDXPlatformAdminExportAuthority",
+          "EDXAdminExportAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/classification.html",
+      "workspace": "admin",
+      "physicalScreen": "classification",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/connectors-registry.html",
+      "workspace": "admin",
+      "physicalScreen": "connectors-registry",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/data-protection.html",
+      "workspace": "admin",
+      "physicalScreen": "data-protection",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [
+        "EDXDataProtectionExportAuthority"
+      ],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority",
+        "EDXDataProtectionExportAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/evidence-packs.html",
+      "workspace": "admin",
+      "physicalScreen": "evidence-packs",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ],
+        [
+          "EDXPlatformAdminExportAuthority",
+          "EDXAdminExportAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/identity-sso.html",
+      "workspace": "admin",
+      "physicalScreen": "identity-sso",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/landing.html",
+      "workspace": "admin",
+      "physicalScreen": "landing",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminHomeAuthority",
+          "EDXAdminHomeAuthority",
+          "EDXWorkspaceHomeAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/masking-rls.html",
+      "workspace": "admin",
+      "physicalScreen": "masking-rls",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/network-access.html",
+      "workspace": "admin",
+      "physicalScreen": "network-access",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/notifications.html",
+      "workspace": "admin",
+      "physicalScreen": "notifications",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ],
+        [
+          "EDXPlatformAdminExportAuthority",
+          "EDXAdminExportAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/platform-change-requests.html",
+      "workspace": "admin",
+      "physicalScreen": "platform-change-requests",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/purpose-policies.html",
+      "workspace": "admin",
+      "physicalScreen": "purpose-policies",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [
+        "EDXPolicyExportAuthority",
+        "EDXPurposePolicyApplyAuthority"
+      ],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority",
+        "EDXConsumerAuthority",
+        "EDXPolicyExportAuthority",
+        "EDXPurposePolicyApplyAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/secrets-vault.html",
+      "workspace": "admin",
+      "physicalScreen": "secrets-vault",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/slo-monitoring.html",
+      "workspace": "admin",
+      "physicalScreen": "slo-monitoring",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/tenant-provisioning.html",
+      "workspace": "admin",
+      "physicalScreen": "tenant-provisioning",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/admin/users-roles.html",
+      "workspace": "admin",
+      "physicalScreen": "users-roles",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXPlatformAdminReadAuthority",
+          "EDXAdminReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXPlatformAdminCommandAuthority",
+          "EDXAdminCommandAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/assurance-reviews.html",
+      "workspace": "auditor",
+      "physicalScreen": "assurance-reviews",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/audit-activity.html",
+      "workspace": "auditor",
+      "physicalScreen": "audit-activity",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/compliance-reports.html",
+      "workspace": "auditor",
+      "physicalScreen": "compliance-reports",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/connector-integration-assurance.html",
+      "workspace": "auditor",
+      "physicalScreen": "connector-integration-assurance",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/data-governance-promotion-assurance.html",
+      "workspace": "auditor",
+      "physicalScreen": "data-governance-promotion-assurance",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/data-sharing-export-assurance.html",
+      "workspace": "auditor",
+      "physicalScreen": "data-sharing-export-assurance",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/evidence-explorer.html",
+      "workspace": "auditor",
+      "physicalScreen": "evidence-explorer",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/exceptions-findings.html",
+      "workspace": "auditor",
+      "physicalScreen": "exceptions-findings",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/identity-access-assurance.html",
+      "workspace": "auditor",
+      "physicalScreen": "identity-access-assurance",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorAssuranceAuthority",
+          "EDXAuditorReadAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXAuditorEvidenceExportAuthority",
+          "EDXAuditorAssuranceAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/auditor/landing.html",
+      "workspace": "auditor",
+      "physicalScreen": "landing",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXAuditorHomeAuthority",
+          "EDXAuditorAssuranceAuthority",
+          "EDXWorkspaceHomeAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/catalog-browse.html",
+      "workspace": "consumer",
+      "physicalScreen": "catalog-browse",
+      "startupAllOf": [
+        "EDXConsumerCatalogAuthority",
+        "EDXConsumerAccessGrantAuthority",
+        "EDXMaskingRLSAuthority"
+      ],
+      "startupAnyOf": [
+        [
+          "EDXConsumerEntitlementAuthority",
+          "EDXUserRoleAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXConsumerAccessGrantAuthority",
+        "EDXConsumerCatalogAuthority",
+        "EDXConsumerEntitlementAuthority",
+        "EDXMaskingRLSAuthority",
+        "EDXPurposeOfUseAuthority",
+        "EDXUserRoleAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/dataset-detail.html",
+      "workspace": "consumer",
+      "physicalScreen": "dataset-detail",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXConsumerCatalogAuthority",
+          "EDXConsumerDatasetAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXConsumerCatalogAuthority",
+        "EDXConsumerDatasetAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/export-requests-history.html",
+      "workspace": "consumer",
+      "physicalScreen": "export-requests-history",
+      "startupAllOf": [
+        "EDXConsumerExportAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXConsumerUseAuthorizationAuthority",
+          "EDXConsumerAccessAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXConsumerExportAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/export-requests-new.html",
+      "workspace": "consumer",
+      "physicalScreen": "export-requests-new",
+      "startupAllOf": [
+        "EDXConsumerExportContextAuthority",
+        "EDXExportRequestAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXConsumerUseAuthorizationAuthority",
+          "EDXConsumerAccessAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXConsumerExportContextAuthority",
+        "EDXExportRequestAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/help-using-edx-data.html",
+      "workspace": "consumer",
+      "physicalScreen": "help-using-edx-data",
+      "startupAllOf": [],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/landing.html",
+      "workspace": "consumer",
+      "physicalScreen": "landing",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXConsumerHomeAuthority",
+          "EDXWorkspaceHomeAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/my-access.html",
+      "workspace": "consumer",
+      "physicalScreen": "my-access",
+      "startupAllOf": [
+        "EDXConsumerAccessAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXConsumerAccessAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/query-workbench.html",
+      "workspace": "consumer",
+      "physicalScreen": "query-workbench",
+      "startupAllOf": [
+        "EDXConsumerQueryContextAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXGovernedQueryAuthority",
+        "EDXSavedQueryAuthority"
+      ],
+      "operationAnyOf": [
+        [
+          "EDXConsumerUseAuthorizationAuthority",
+          "EDXConsumerAccessAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXConsumerQueryContextAuthority",
+        "EDXGovernedQueryAuthority",
+        "EDXSavedQueryAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/reports-dashboards.html",
+      "workspace": "consumer",
+      "physicalScreen": "reports-dashboards",
+      "startupAllOf": [
+        "EDXConsumerReportApplicationAuthority",
+        "EDXConsumerExternalToolContextAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXGovernedReportOpenAuthority",
+        "EDXStateApplicationLaunchAuthority"
+      ],
+      "operationAnyOf": [
+        [
+          "EDXConsumerUseAuthorizationAuthority",
+          "EDXConsumerAccessAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXConsumerExternalToolContextAuthority",
+        "EDXConsumerReportApplicationAuthority",
+        "EDXConsumerReportingAttentionAuthority",
+        "EDXExternalToolAuthority",
+        "EDXExternalToolLaunchAuthority",
+        "EDXGovernedReportOpenAuthority",
+        "EDXStateApplicationLaunchAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/request-access.html",
+      "workspace": "consumer",
+      "physicalScreen": "request-access",
+      "startupAllOf": [
+        "EDXConsumerAccessAuthority",
+        "EDXAccessRequestAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXAccessRequestAuthority",
+        "EDXConsumerAccessAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/saved-queries.html",
+      "workspace": "consumer",
+      "physicalScreen": "saved-queries",
+      "startupAllOf": [
+        "EDXConsumerQueryContextAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXGovernedQueryAuthority",
+        "EDXSavedQueryAuthority"
+      ],
+      "operationAnyOf": [
+        [
+          "EDXConsumerUseAuthorizationAuthority",
+          "EDXConsumerAccessAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXConsumerQueryContextAuthority",
+        "EDXGovernedQueryAuthority",
+        "EDXSavedQueryAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/consumer/subscriptions.html",
+      "workspace": "consumer",
+      "physicalScreen": "subscriptions",
+      "startupAllOf": [
+        "EDXConsumerAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXConsumerUseAuthorizationAuthority",
+          "EDXConsumerAccessAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXConsumerAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/identity-resolution-crosswalks.html",
+      "workspace": "engineer",
+      "physicalScreen": "identity-resolution-crosswalks",
+      "startupAllOf": [
+        "EDXEngineerIdentityResolutionAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerIdentityResolutionAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/landing.html",
+      "workspace": "engineer",
+      "physicalScreen": "landing",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXEngineerHomeAuthority",
+          "EDXEngineerAuthority",
+          "EDXWorkspaceHomeAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerAuthority",
+        "EDXEngineerHomeAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/logs.html",
+      "workspace": "engineer",
+      "physicalScreen": "logs",
+      "startupAllOf": [
+        "EDXEngineerLogAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerLogAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/mapping-versions.html",
+      "workspace": "engineer",
+      "physicalScreen": "mapping-versions",
+      "startupAllOf": [
+        "EDXEngineerMappingAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerMappingAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/mappings.html",
+      "workspace": "engineer",
+      "physicalScreen": "mappings",
+      "startupAllOf": [
+        "EDXEngineerMappingAuthority",
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerIdentityResolutionAuthority",
+        "EDXEngineerMappingAuthority",
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/monitoring.html",
+      "workspace": "engineer",
+      "physicalScreen": "monitoring",
+      "startupAllOf": [
+        "EDXEngineerMonitoringAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerMonitoringAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/pipeline-detail.html",
+      "workspace": "engineer",
+      "physicalScreen": "pipeline-detail",
+      "startupAllOf": [
+        "EDXEngineerPipelineAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/pipeline-runs.html",
+      "workspace": "engineer",
+      "physicalScreen": "pipeline-runs",
+      "startupAllOf": [
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "startupAnyOf": [
+        [
+          "EDXEngineerRunAuthority",
+          "EDXEngineerPipelineRunAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerPipelineRunAuthority",
+        "EDXEngineerRunAuthority",
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/pipelines.html",
+      "workspace": "engineer",
+      "physicalScreen": "pipelines",
+      "startupAllOf": [
+        "EDXEngineerPipelineAuthority",
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerAuthority",
+        "EDXEngineerPipelineAuthority",
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/quarantines.html",
+      "workspace": "engineer",
+      "physicalScreen": "quarantines",
+      "startupAllOf": [
+        "EDXEngineerQuarantineAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXEngineerReplayAuthority",
+          "EDXEngineerSchedulesRetriesAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXEngineerIdentityResolutionAuthority",
+        "EDXEngineerMappingAuthority",
+        "EDXEngineerQuarantineAuthority",
+        "EDXEngineerReplayAuthority",
+        "EDXEngineerSchedulesRetriesAuthority",
+        "EDXEngineerValidationAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/schedules-retries.html",
+      "workspace": "engineer",
+      "physicalScreen": "schedules-retries",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXEngineerScheduleRetryAuthority",
+          "EDXEngineerSchedulesRetriesAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerPipelineAuthority",
+        "EDXEngineerPipelineRunAuthority",
+        "EDXEngineerQuarantineAuthority",
+        "EDXEngineerRunsAuthority",
+        "EDXEngineerScheduleRetryAuthority",
+        "EDXEngineerSchedulesRetriesAuthority",
+        "EDXEngineerValidationAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/sources.html",
+      "workspace": "engineer",
+      "physicalScreen": "sources",
+      "startupAllOf": [
+        "EDXTenantAdminAuthority",
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXEngineerStateServiceAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerAuthority",
+        "EDXEngineerStateServiceAuthority",
+        "EDXSchoolYearODSContextAuthority",
+        "EDXTenantAdminAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/state-reporting-submission.html",
+      "workspace": "engineer",
+      "physicalScreen": "state-reporting-submission",
+      "startupAllOf": [
+        "EDXSchoolYearODSContextAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXStateReportingComparisonAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXSchoolYearODSContextAuthority",
+        "EDXStateReportingComparisonAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/engineer/validation.html",
+      "workspace": "engineer",
+      "physicalScreen": "validation",
+      "startupAllOf": [
+        "EDXEngineerValidationAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXEngineerIdentityResolutionAuthority",
+        "EDXEngineerMappingAuthority",
+        "EDXEngineerPipelineRunAuthority",
+        "EDXEngineerQuarantineAuthority",
+        "EDXEngineerRunAuthority",
+        "EDXEngineerScheduleAuthority",
+        "EDXEngineerSchedulesRetriesAuthority",
+        "EDXEngineerValidationAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/approvals-queue.html",
+      "workspace": "steward",
+      "physicalScreen": "approvals-queue",
+      "startupAllOf": [
+        "EDXStewardReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXStewardDecisionAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXStewardDecisionAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/catalog-glossary.html",
+      "workspace": "steward",
+      "physicalScreen": "catalog-glossary",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXStewardCatalogAuthority",
+          "EDXCatalogAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXCatalogAuthority",
+        "EDXStewardCatalogAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/data-shares.html",
+      "workspace": "steward",
+      "physicalScreen": "data-shares",
+      "startupAllOf": [
+        "EDXDataShareAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXDataShareAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/data-validation.html",
+      "workspace": "steward",
+      "physicalScreen": "data-validation",
+      "startupAllOf": [
+        "EDXStewardReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXQualityReviewAuthority",
+        "EDXDriftGovernanceAuthority",
+        "EDXStewardWaiverAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXDQCertificationAuthority",
+        "EDXDriftGovernanceAuthority",
+        "EDXQualityReviewAuthority",
+        "EDXQuarantineAuthority",
+        "EDXStewardWaiverAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/dataset-tagging.html",
+      "workspace": "steward",
+      "physicalScreen": "dataset-tagging",
+      "startupAllOf": [
+        "EDXClassificationAuthority",
+        "EDXDatasetClassificationAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXClassificationAuthority",
+        "EDXDatasetClassificationAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/dq-rules.html",
+      "workspace": "steward",
+      "physicalScreen": "dq-rules",
+      "startupAllOf": [
+        "EDXStewardReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXDQRuleGovernanceAuthority",
+        "EDXStewardWaiverAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXDQCertificationAuthority",
+        "EDXDQExecutionEvidenceAuthority",
+        "EDXDQRuleGovernanceAuthority",
+        "EDXStewardWaiverAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/export-requests.html",
+      "workspace": "steward",
+      "physicalScreen": "export-requests",
+      "startupAllOf": [
+        "EDXExportRequestAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXExportRequestAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/landing.html",
+      "workspace": "steward",
+      "physicalScreen": "landing",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXStewardHomeAuthority",
+          "EDXWorkspaceHomeAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXStewardDecisionAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/policy-simulator.html",
+      "workspace": "steward",
+      "physicalScreen": "policy-simulator",
+      "startupAllOf": [
+        "EDXPolicySimulationAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXPolicySimulationAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/promotion-approvals.html",
+      "workspace": "steward",
+      "physicalScreen": "promotion-approvals",
+      "startupAllOf": [
+        "EDXStewardReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXStewardWaiverAuthority"
+      ],
+      "operationAnyOf": [
+        [
+          "EDXStewardPromotionGovernanceAuthority",
+          "EDXStewardDecisionAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXStewardDecisionAuthority",
+        "EDXStewardPromotionGovernanceAuthority",
+        "EDXStewardWaiverAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/promotion-gates.html",
+      "workspace": "steward",
+      "physicalScreen": "promotion-gates",
+      "startupAllOf": [
+        "EDXStewardReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXStewardGateVersioningAuthority",
+        "EDXPromotionImpactAuthority",
+        "EDXPromotionGatePublicationAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXPromotionGatePublicationAuthority",
+        "EDXPromotionImpactAuthority",
+        "EDXStewardGateVersioningAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/steward/promotion-governance.html",
+      "workspace": "steward",
+      "physicalScreen": "promotion-governance",
+      "startupAllOf": [
+        "EDXStewardReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [
+        [
+          "EDXStewardPromotionGovernanceAuthority",
+          "EDXStewardDecisionAuthority"
+        ]
+      ],
+      "observedExternalAdapters": [
+        "EDXStewardDecisionAuthority",
+        "EDXStewardPromotionGovernanceAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/access-reviews.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "access-reviews",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/agreements-participation.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "agreements-participation",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/audit-activity.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "audit-activity",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/connectors.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "connectors",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/identity-sso.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "identity-sso",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/landing.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "landing",
+      "startupAllOf": [],
+      "startupAnyOf": [
+        [
+          "EDXTenantAdminHomeAuthority",
+          "EDXWorkspaceHomeAuthority"
+        ]
+      ],
+      "operationAllOf": [],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/notifications.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "notifications",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/organization.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "organization",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority",
+        "EDXTenantOrganizationAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [
+        "EDXTenantOrganizationAuthority"
+      ],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/school-year-ods-management.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "school-year-ods-management",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/service-accounts.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "service-accounts",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/tenant-settings.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "tenant-settings",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/usage-entitlements.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "usage-entitlements",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    },
+    {
+      "route": "/pages/tenant-admin/users-roles.html",
+      "workspace": "tenant-admin",
+      "physicalScreen": "users-roles",
+      "startupAllOf": [
+        "EDXTenantAdminReadAuthority"
+      ],
+      "startupAnyOf": [],
+      "operationAllOf": [
+        "EDXTenantAdminCommandAuthority"
+      ],
+      "operationAnyOf": [],
+      "observedExternalAdapters": [],
+      "notes": []
+    }
+  ],
+  "logicalScreenCount": 71,
+  "primarySidebarScreenCount": 70,
+  "contextualLogicalScreenCount": 1,
+  "specialistViewCount": 7,
+  "physicalViewCount": 78
+}

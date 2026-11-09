@@ -1,0 +1,122 @@
+<!-- partials/sidebar-admin.html — Platform Admin control-plane navigation
+     Canonical ownership:
+     - Platform Admin owns provider-level tenant lifecycle, platform administrative access,
+       connector catalog, platform security/policy controls, operations, assurance evidence
+       and commercial controls.
+     - Tenant-local identity, SSO, SCIM, organization, connector-instance and access-review
+       configuration is delegated to Tenant Admin.
+     - Dataset governance and promotion decisions are delegated to Data Steward.
+     - Contextual/read-only drill-down pages are intentionally excluded from top-level navigation.
+-->
+<nav id="sidebarNav"
+     class="d-flex flex-column flex-shrink-0 p-3 border-end bg-body"
+     role="navigation"
+     aria-label="Platform Admin navigation">
+
+  <ul class="nav nav-pills flex-column mb-auto" id="sidebarNavList">
+
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">Home</li>
+    <li class="nav-item">
+      <a href="../admin/landing.html" class="nav-link link-body-emphasis" aria-label="Platform Admin Home">
+        <i class="bi bi-house-door me-2" aria-hidden="true"></i> Platform Admin Home
+      </a>
+    </li>
+
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">Tenant &amp; Commercial</li>
+    <li class="nav-item">
+      <a href="../admin/tenant-provisioning.html" class="nav-link link-body-emphasis" aria-label="Tenant Directory and Provisioning">
+        <i class="bi bi-building-add me-2" aria-hidden="true"></i> Tenant Directory &amp; Provisioning
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/billing.html" class="nav-link link-body-emphasis" aria-label="Billing and Usage">
+        <i class="bi bi-receipt me-2" aria-hidden="true"></i> Billing &amp; Usage
+      </a>
+    </li>
+
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">Platform Access &amp; Security</li>
+    <li class="nav-item">
+      <a href="../admin/users-roles.html" class="nav-link link-body-emphasis" aria-label="Platform Access and Role Governance">
+        <i class="bi bi-people me-2" aria-hidden="true"></i> Platform Access &amp; Role Governance
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/secrets-vault.html" class="nav-link link-body-emphasis" aria-label="Secrets and Credential References">
+        <i class="bi bi-key me-2" aria-hidden="true"></i> Secrets &amp; Credential References
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/network-access.html" class="nav-link link-body-emphasis" aria-label="Network and Security Controls">
+        <i class="bi bi-router me-2" aria-hidden="true"></i> Network &amp; Security Controls
+      </a>
+    </li>
+
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">Exchange Foundation</li>
+    <li class="nav-item">
+      <a href="../admin/connectors-registry.html" class="nav-link link-body-emphasis" aria-label="Connector Catalog and Certification">
+        <i class="bi bi-plug me-2" aria-hidden="true"></i> Connector Catalog &amp; Certification
+      </a>
+    </li>
+
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">Policy &amp; Protection</li>
+    <li class="nav-item">
+      <a href="../admin/classification.html" class="nav-link link-body-emphasis" aria-label="Classification &amp; Tagging">
+        <i class="bi bi-tags me-2" aria-hidden="true"></i> Classification &amp; Tagging
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/purpose-policies.html" class="nav-link link-body-emphasis" aria-label="Purpose and Access Policies">
+        <i class="bi bi-bullseye me-2" aria-hidden="true"></i> Purpose &amp; Access Policies
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/masking-rls.html" class="nav-link link-body-emphasis" aria-label="Masking and Row-Level Security">
+        <i class="bi bi-shield-lock me-2" aria-hidden="true"></i> Masking &amp; Row-Level Security
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/data-protection.html" class="nav-link link-body-emphasis" aria-label="Data Protection Retention and Legal Hold">
+        <i class="bi bi-database-lock me-2" aria-hidden="true"></i> Data Protection, Retention &amp; Legal Hold
+      </a>
+    </li>
+
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">Platform Operations</li>
+    <li class="nav-item">
+      <a href="../admin/notifications.html" class="nav-link link-body-emphasis" aria-label="Platform Notifications">
+        <i class="bi bi-bell me-2" aria-hidden="true"></i> Platform Notifications
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/slo-monitoring.html" class="nav-link link-body-emphasis" aria-label="SLO and Platform Operations">
+        <i class="bi bi-speedometer2 me-2" aria-hidden="true"></i> SLO &amp; Platform Operations
+      </a>
+    </li>
+
+    <li class="mt-2 px-2 small text-uppercase text-body-secondary" aria-hidden="true">Governance &amp; Assurance</li>
+    <li class="nav-item">
+      <a href="../admin/platform-change-requests.html" class="nav-link link-body-emphasis" aria-label="Platform Change Requests">
+        <i class="bi bi-inboxes me-2" aria-hidden="true"></i> Platform Change Requests
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/audit-logs.html" class="nav-link link-body-emphasis" aria-label="Platform Audit Logs">
+        <i class="bi bi-journal-check me-2" aria-hidden="true"></i> Platform Audit Logs
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="../admin/evidence-packs.html" class="nav-link link-body-emphasis" aria-label="Compliance Evidence Packages">
+        <i class="bi bi-file-earmark-lock me-2" aria-hidden="true"></i> Evidence Packages
+      </a>
+    </li>
+
+    <li class="nav-item"><a href="../admin/evidence-cross-domain.html" class="nav-link link-body-emphasis" aria-label="Cross-Domain Evidence Assurance"><i class="bi bi-shield-check me-2" aria-hidden="true"></i> Cross-Domain Evidence</a></li>
+  </ul>
+
+  <hr>
+
+  <div class="edx-role-summary text-body-secondary small mt-auto">
+    <div class="fw-semibold text-body">Platform Admin</div>
+    <div>Provider control plane · tenant lifecycle · platform access governance · connector catalog · security &amp; policy · reliability · compliance · licensing</div>
+    <div class="mt-1">Tenant-local identity and administration, dataset governance, promotion decisions and data consumption remain with their authoritative roles.</div>
+  </div>
+</nav>

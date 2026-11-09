@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "schema_id": "edx.interoperability-profile-registry.v1",
+    "version": "1.0.0",
+    "release": "2.87",
+    "runtime_mode": "demo",
+    "as_of": "2026-09-24T13:45:00+05:30",
+    "production_boundary": "Production publication/supersession requires a connected provider profile-governance service and immutable evidence. Packaged profiles are read-only reference contracts."
+  },
+  "authority": {
+    "workspace": "admin",
+    "screen": "Connector Catalog & Certification",
+    "authority_name": "Platform Admin \u2014 Interoperability Profile Authority",
+    "resource_type": "admin.interoperability-profile",
+    "mutation_consumers": [
+      "admin"
+    ],
+    "read_consumers": [
+      "tenant-admin",
+      "engineer"
+    ],
+    "fail_closed": true
+  },
+  "current_profile": {
+    "profile_id": "STATE-DATAHUB-2026-27",
+    "profile_revision": 1,
+    "profile_contract_hash": "edea6828ecb183b67dda74e7c0fde50cad7f67bf1d93b5bd3d8874ca52bd25dd"
+  },
+  "profiles": [
+    {
+      "profile_id": "STATE-DATAHUB-2026-27",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "lifecycle_state": "Effective",
+      "school_year": "2026-2027",
+      "school_year_label": "2026-27",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "authority": {
+        "owner_workspace": "admin",
+        "owner_screen": "Connector Catalog & Certification",
+        "owner": "Platform Admin \u2014 Interoperability Profile Authority",
+        "mutation_policy": "Only provider/control-plane profile governance may publish or supersede a profile revision. Tenant Admin and Data Engineer consume read-only bindings."
+      },
+      "standards": {
+        "edfi": {
+          "component_id": "EDFI-API-7.3-DS4",
+          "api_version": "7.3",
+          "data_standard_version": "4",
+          "requirement": "Exact 2026-27 profile requirement",
+          "connector_modes": [
+            "Native",
+            "Adapter"
+          ]
+        },
+        "oneroster": {
+          "component_id": "ONEROSTER-1.1",
+          "version": "1.1",
+          "requirement": "Exact 2026-27 profile requirement",
+          "transports": [
+            "REST",
+            "CSV/SFTP"
+          ],
+          "connector_modes": [
+            "Native",
+            "File Compatible",
+            "Adapter"
+          ]
+        },
+        "ceds": {
+          "component_id": "CEDS-REFERENCE",
+          "version_policy": "Reference alignment only \u2014 no exact release pinned by this profile",
+          "connector_modes": [
+            "Reference"
+          ]
+        },
+        "custom": {
+          "component_id": "ADAPTER-CONTRACT",
+          "version_policy": "Connector-owned version; mapping/adapter must be validated against this profile revision",
+          "connector_modes": [
+            "Adapter"
+          ]
+        }
+      },
+      "binding_contract": {
+        "required_fields": [
+          "profile_id",
+          "profile_version",
+          "profile_revision",
+          "profile_contract_hash",
+          "school_year",
+          "binding_state",
+          "component_id",
+          "conformance_mode"
+        ],
+        "consumer_workspaces": [
+          "tenant-admin",
+          "engineer"
+        ],
+        "connector_rule": "Tenant connector instances must bind an effective Platform Admin profile revision. Binding never transfers profile authority.",
+        "mapping_rule": "Mappings must bind the same profile id/revision/hash as the tenant connector and governed school-year context. Standard-specific mappings must match the exact required version.",
+        "drift_rule": "A profile id, revision, contract-hash, school-year, or standard-version mismatch is Revalidation Required and blocks new governed handoff/activation in Production.",
+        "upgrade_rule": "Publishing a newer profile revision never auto-upgrades existing connector or mapping bindings; explicit revalidation/rebinding is required.",
+        "certification_rule": "Profile conformance is not connector certification. Connector/product certification remains a separate evidence-backed state."
+      },
+      "evidence": {
+        "profile_evidence_id": "EVD-INTEROP-PROFILE-2026-27-R1",
+        "source_basis": "Current public technology roadmap verified 2026-09-24; connector-specific certification evidence remains separate.",
+        "published_at": "2026-09-24T13:45:00+05:30",
+        "published_by": "Platform Interoperability Governance"
+      },
+      "profile_contract_hash": "edea6828ecb183b67dda74e7c0fde50cad7f67bf1d93b5bd3d8874ca52bd25dd"
+    }
+  ],
+  "history": [
+    {
+      "event_id": "IPR-EVT-2026-27-R1-PUBLISH",
+      "profile_id": "STATE-DATAHUB-2026-27",
+      "profile_revision": 1,
+      "event": "Published Effective",
+      "at": "2026-09-24T13:45:00+05:30",
+      "actor": "Platform Interoperability Governance",
+      "evidence_id": "EVD-INTEROP-PROFILE-2026-27-R1"
+    }
+  ]
+}

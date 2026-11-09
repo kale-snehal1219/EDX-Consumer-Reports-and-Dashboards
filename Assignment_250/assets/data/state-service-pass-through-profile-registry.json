@@ -1,0 +1,306 @@
+{
+  "meta": {
+    "schema_id": "edx.state-service-pass-through-profile-registry.v1",
+    "release": "2.90",
+    "as_of": "2026-09-24T18:45:00+05:30",
+    "authority_owner": "Tenant Admin — Tenant Connectors / State Services & Pass-Through",
+    "production_boundary": "Profile assignment, organization eligibility and credential-reference binding are Tenant Admin authority. Data Engineer owns technical transaction execution only. No secret values are stored in this registry.",
+    "registry_contract_hash": "7147d95aecf5c2c9d7360fd6b0f616f57b9d08f9ee8f659658a7bc19d672819a"
+  },
+  "profile_governance": {
+    "versioning_rule": "Profile version/revision/hash changes require explicit revalidation of tenant bindings and downstream Engineer consumers; no silent auto-upgrade.",
+    "credential_rule": "Only vault:// credential references are allowed. Raw credentials, tokens and secrets are prohibited.",
+    "organization_rule": "Every transaction must resolve to a current external-organization binding and an eligible canonical organization type/scope.",
+    "transaction_rule": "Correlation ID + idempotency key + attempt + acknowledgement/error outcome + immutable evidence are required for governed transaction execution."
+  },
+  "profiles": [
+    {
+      "profile_id": "STATE-SVC-STUDENT-IDENTITY-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "label": "Student Identity Service",
+      "capability": "Student identity lookup / match / create / pass-through",
+      "direction": "Bidirectional Request / Response",
+      "organization_eligibility": [
+        "LEA / District",
+        "School"
+      ],
+      "transaction_pattern": "Request / Response",
+      "credential_reference_required": true,
+      "idempotency": {
+        "required": true,
+        "key_basis": "tenant + organization + operation + source-record token",
+        "duplicate_behavior": "Return prior governed result when the exact idempotency key is replayed."
+      },
+      "retry_policy": {
+        "max_attempts": 4,
+        "backoff": "Exponential with jitter",
+        "retryable_errors": [
+          "TEMPORARY_UNAVAILABLE",
+          "RATE_LIMIT",
+          "TIMEOUT"
+        ],
+        "non_retryable_errors": [
+          "AUTHORIZATION",
+          "VALIDATION",
+          "AMBIGUOUS_MATCH",
+          "PERMANENT_REJECTION"
+        ]
+      },
+      "acknowledgement": {
+        "mode": "Synchronous result + correlation identifier",
+        "required": true
+      },
+      "error_handling": "Retry only retryable technical failures. Ambiguous/validation results require governed review; CREATE never auto-runs after ambiguous MATCH.",
+      "evidence_policy": "Persist correlation ID, idempotency key hash, organization binding revision, attempt count, response category, evidence ID and timestamps; do not persist raw protected identity payload in packaged evidence.",
+      "profile_contract_hash": "71a320c960795c5adb57b01e9801e60794aa38dceb7293539016e6a3e417b2db"
+    },
+    {
+      "profile_id": "STATE-SVC-PORTABLE-RECORD-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "label": "Portable Record Pass-Through",
+      "capability": "Governed portable student record request / pass-through",
+      "direction": "Bidirectional Request / Response",
+      "organization_eligibility": [
+        "LEA / District",
+        "School"
+      ],
+      "transaction_pattern": "Request / Response",
+      "credential_reference_required": true,
+      "idempotency": {
+        "required": true,
+        "key_basis": "tenant + organization + request type + governed student token + request window",
+        "duplicate_behavior": "Do not create a second external request when the idempotency key is already active or completed."
+      },
+      "retry_policy": {
+        "max_attempts": 5,
+        "backoff": "Exponential with jitter",
+        "retryable_errors": [
+          "TEMPORARY_UNAVAILABLE",
+          "RATE_LIMIT",
+          "TIMEOUT"
+        ],
+        "non_retryable_errors": [
+          "AUTHORIZATION",
+          "VALIDATION",
+          "NOT_FOUND",
+          "PERMANENT_REJECTION"
+        ]
+      },
+      "acknowledgement": {
+        "mode": "Accepted / completed acknowledgement with external correlation ID",
+        "required": true
+      },
+      "error_handling": "Technical retry is independent from governed student matching. Not-found and validation errors return to Engineer review without mutating canonical identity.",
+      "evidence_policy": "Persist governed request token, correlation ID, acknowledgement ID, attempt history, result category and evidence hash; source record content remains outside packaged evidence.",
+      "profile_contract_hash": "ce162f24e75271e3a37eeb01e8187d9b2d7ae8caf42e1f30cae2d87168709940"
+    },
+    {
+      "profile_id": "STATE-SVC-ASSESSMENT-INBOUND-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "label": "Assessment Results Delivery",
+      "capability": "Inbound assessment-result delivery / acknowledgement",
+      "direction": "Inbound",
+      "organization_eligibility": [
+        "LEA / District",
+        "School"
+      ],
+      "transaction_pattern": "Batch Delivery + Acknowledgement",
+      "credential_reference_required": true,
+      "idempotency": {
+        "required": true,
+        "key_basis": "delivery manifest ID + tenant + school year",
+        "duplicate_behavior": "Duplicate delivery manifest is acknowledged without duplicating Bronze ingestion."
+      },
+      "retry_policy": {
+        "max_attempts": 6,
+        "backoff": "Exponential with capped interval",
+        "retryable_errors": [
+          "TEMPORARY_UNAVAILABLE",
+          "TIMEOUT",
+          "CHECKSUM_RETRY"
+        ],
+        "non_retryable_errors": [
+          "AUTHORIZATION",
+          "SCHEMA_INVALID",
+          "SCOPE_INVALID",
+          "PERMANENT_REJECTION"
+        ]
+      },
+      "acknowledgement": {
+        "mode": "Manifest acknowledgement + accepted/rejected record counts",
+        "required": true
+      },
+      "error_handling": "Checksum/schema/scope validation occurs before ingestion. Retryable transport errors may replay the same manifest; permanent schema/scope failures require corrected delivery.",
+      "evidence_policy": "Persist manifest ID, checksum, correlation ID, acknowledgement, accepted/rejected counts, attempt history and ingestion evidence ID.",
+      "profile_contract_hash": "331955d71ad91d42d906fed5e707804187f82d0f3a1cbb718e22d15edcc00f51"
+    },
+    {
+      "profile_id": "STATE-SVC-REPORTING-GATEWAY-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "label": "Reporting Submission Gateway",
+      "capability": "Outbound reporting package submission + acknowledgement",
+      "direction": "Outbound + Acknowledgement",
+      "organization_eligibility": [
+        "LEA / District"
+      ],
+      "transaction_pattern": "Package Submission + Asynchronous Acknowledgement",
+      "credential_reference_required": true,
+      "idempotency": {
+        "required": true,
+        "key_basis": "immutable submission package ID + version",
+        "duplicate_behavior": "A retransmission of the same immutable package is correlated to the original submission rather than creating a new package identity."
+      },
+      "retry_policy": {
+        "max_attempts": 5,
+        "backoff": "Exponential with jitter",
+        "retryable_errors": [
+          "TEMPORARY_UNAVAILABLE",
+          "RATE_LIMIT",
+          "TIMEOUT"
+        ],
+        "non_retryable_errors": [
+          "AUTHORIZATION",
+          "PACKAGE_INVALID",
+          "WINDOW_CLOSED",
+          "PERMANENT_REJECTION"
+        ]
+      },
+      "acknowledgement": {
+        "mode": "Submission acknowledgement + reconciliation reference",
+        "required": true
+      },
+      "error_handling": "Retry preserves immutable package identity and idempotency key. Corrected data requires a new package version; permanent rejection cannot be retried as-is.",
+      "evidence_policy": "Persist package ID/version/hash, correlation ID, attempt history, acknowledgement ID, reconciliation result and evidence hash.",
+      "profile_contract_hash": "359ee883dc372553278290c15ce58d58dfcc42d0d36d61c50a7d2e5bb48ffe85"
+    }
+  ],
+  "bindings": [
+    {
+      "binding_id": "SSB-NV-STUDENT-ID-01",
+      "profile_id": "STATE-SVC-STUDENT-IDENTITY-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "connector_id": "CON-SIS-001",
+      "source_connection_ids": [
+        "SRC-NV-PS-PROD"
+      ],
+      "pipeline_ids": [
+        "PIPE-NV-SIS-BRONZE"
+      ],
+      "organization_binding_revision": 18,
+      "eligible_organization_ids": [
+        "ORG-NVUSD-ROOT",
+        "ORG-NVUSD-HS01",
+        "ORG-NVUSD-MS01",
+        "ORG-NVUSD-ES01"
+      ],
+      "credential_reference": "vault://TEN-001-NORTH-VALLEY-USD/state-services/student-identity",
+      "status": "Current",
+      "last_verified_at": "2026-09-24T12:40:00Z",
+      "correlation_id": "CORR-SSB-STUDENT-ID-20260924",
+      "evidence_id": "EVID-SSB-STUDENT-ID-r1",
+      "owner": "Tenant Integration Administration",
+      "engineer_owner": "Student Data Engineering",
+      "profile_contract_hash": "71a320c960795c5adb57b01e9801e60794aa38dceb7293539016e6a3e417b2db",
+      "mutation_allowed_by_engineer": false
+    },
+    {
+      "binding_id": "SSB-NV-PORTABLE-RECORD-01",
+      "profile_id": "STATE-SVC-PORTABLE-RECORD-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "connector_id": "CON-SIS-001",
+      "source_connection_ids": [
+        "SRC-NV-PS-PROD"
+      ],
+      "pipeline_ids": [
+        "PIPE-NV-SIS-BRONZE"
+      ],
+      "organization_binding_revision": 18,
+      "eligible_organization_ids": [
+        "ORG-NVUSD-ROOT",
+        "ORG-NVUSD-HS01",
+        "ORG-NVUSD-MS01",
+        "ORG-NVUSD-ES01"
+      ],
+      "credential_reference": "vault://TEN-001-NORTH-VALLEY-USD/state-services/portable-record",
+      "status": "Current",
+      "last_verified_at": "2026-09-24T12:42:00Z",
+      "correlation_id": "CORR-SSB-PORTABLE-20260924",
+      "evidence_id": "EVID-SSB-PORTABLE-r1",
+      "owner": "Tenant Integration Administration",
+      "engineer_owner": "Student Data Engineering",
+      "profile_contract_hash": "ce162f24e75271e3a37eeb01e8187d9b2d7ae8caf42e1f30cae2d87168709940",
+      "mutation_allowed_by_engineer": false
+    },
+    {
+      "binding_id": "SSB-NV-ASSESSMENT-IN-01",
+      "profile_id": "STATE-SVC-ASSESSMENT-INBOUND-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "connector_id": "CON-ASMT-003",
+      "source_connection_ids": [],
+      "pipeline_ids": [],
+      "organization_binding_revision": 18,
+      "eligible_organization_ids": [
+        "ORG-NVUSD-ROOT",
+        "ORG-NVUSD-HS01",
+        "ORG-NVUSD-MS01",
+        "ORG-NVUSD-ES01"
+      ],
+      "credential_reference": "vault://TEN-001-NORTH-VALLEY-USD/state-services/assessment-inbound",
+      "status": "Current",
+      "last_verified_at": "2026-09-24T12:44:00Z",
+      "correlation_id": "CORR-SSB-ASSESSMENT-20260924",
+      "evidence_id": "EVID-SSB-ASSESSMENT-r1",
+      "owner": "Tenant Integration Administration",
+      "engineer_owner": "Assessment Data Engineering",
+      "profile_contract_hash": "331955d71ad91d42d906fed5e707804187f82d0f3a1cbb718e22d15edcc00f51",
+      "mutation_allowed_by_engineer": false
+    },
+    {
+      "binding_id": "SSB-NV-REPORTING-GW-01",
+      "profile_id": "STATE-SVC-REPORTING-GATEWAY-V1",
+      "profile_version": "1.0.0",
+      "profile_revision": 1,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "connector_id": null,
+      "source_connection_ids": [],
+      "pipeline_ids": [
+        "PIPE-NV-STUDENT-SILVER"
+      ],
+      "organization_binding_revision": 18,
+      "eligible_organization_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "credential_reference": "vault://TEN-001-NORTH-VALLEY-USD/state-services/reporting-gateway",
+      "status": "Current",
+      "last_verified_at": "2026-09-24T12:46:00Z",
+      "correlation_id": "CORR-SSB-REPORTING-20260924",
+      "evidence_id": "EVID-SSB-REPORTING-r1",
+      "owner": "Tenant Integration Administration",
+      "engineer_owner": "Reporting Data Engineering",
+      "profile_contract_hash": "359ee883dc372553278290c15ce58d58dfcc42d0d36d61c50a7d2e5bb48ffe85",
+      "mutation_allowed_by_engineer": false
+    }
+  ]
+}

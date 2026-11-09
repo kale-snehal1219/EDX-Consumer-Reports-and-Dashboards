@@ -1,0 +1,3659 @@
+{
+  "meta": {
+    "title": "Reports and Dashboards",
+    "version": "6.1.0",
+    "reference_date": "2026-10-13",
+    "data_updated_at": "2026-10-13T10:30:00Z",
+    "scope": "North Valley USD",
+    "read_only": true,
+    "functional_revision": "2026-10-13",
+    "data_mode": "Illustrative governed reporting snapshots",
+    "aggregate_source_cutoff": "2026-10-10T08:00:00Z"
+  },
+  "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+  "school_years": [
+    "2026-27",
+    "2025-26"
+  ],
+  "reports": [
+    {
+      "id": "RPT-NV-ENROLL-2026",
+      "title": "Enrollment & Mobility — Authorized Scope",
+      "dataset_id": "DS-K12-STUDENT-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "kind": "Enrollment",
+      "summary": "Current enrollment, new starts and withdrawals by school and grade.",
+      "group": "enrollment",
+      "published_version": "2.2",
+      "published_at": "2026-10-10T10:00:00Z",
+      "period": "2026–27",
+      "owner": "District Analytics Office",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009",
+      "classification": "Restricted",
+      "status": "Published",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "2.2",
+          "state": "Published",
+          "published_at": "2026-10-10T10:00:00Z",
+          "summary": "Current approved reporting definition",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-ENROLL-2026-CURRENT",
+          "source_cutoff": "2026-10-10T08:00:00Z",
+          "definition_change": "Current approved measure definitions and reporting population.",
+          "measures": [
+            "enrolled",
+            "new_enrollments",
+            "withdrawals",
+            "active"
+          ],
+          "publication_id": "PUBL-RPT-NV-ENROLL-2026-20261010",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009"
+        },
+        {
+          "version": "1.0",
+          "state": "Superseded",
+          "published_at": "2026-09-18T10:00:00Z",
+          "summary": "Earlier reporting definition retained for historical reference",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-ENROLL-2026-PRIOR",
+          "source_cutoff": "2026-09-17T19:00:00Z",
+          "definition_change": "Earlier approved calculation and population rules; preserved result snapshot.",
+          "measures": [
+            "enrolled",
+            "new_enrollments",
+            "active"
+          ],
+          "publication_id": "PUBL-RPT-NV-ENROLL-2026-20260918",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-REPORT-PRIOR-ENROLLMENT"
+        }
+      ]
+    },
+    {
+      "id": "RPT-NV-ENROLL-GRADE",
+      "title": "Enrollment by Grade & School",
+      "dataset_id": "DS-K12-STUDENT-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "kind": "Enrollment",
+      "summary": "Grade-level distribution and prior-year comparison.",
+      "group": "enrollment",
+      "published_version": "1.5",
+      "published_at": "2026-10-10T10:00:00Z",
+      "period": "2026–27",
+      "owner": "District Analytics Office",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009",
+      "classification": "Restricted",
+      "status": "Published",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "1.5",
+          "state": "Published",
+          "published_at": "2026-10-10T10:00:00Z",
+          "summary": "Current approved reporting definition",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-ENROLL-GRADE-CURRENT",
+          "source_cutoff": "2026-10-10T08:00:00Z",
+          "definition_change": "Current approved measure definitions and reporting population.",
+          "measures": [
+            "enrolled",
+            "new_enrollments",
+            "withdrawals",
+            "active"
+          ],
+          "publication_id": "PUBL-RPT-NV-ENROLL-GRADE-20261010",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009"
+        },
+        {
+          "version": "1.0",
+          "state": "Superseded",
+          "published_at": "2026-09-18T10:00:00Z",
+          "summary": "Earlier reporting definition retained for historical reference",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-ENROLL-GRADE-PRIOR",
+          "source_cutoff": "2026-09-17T19:00:00Z",
+          "definition_change": "Earlier approved calculation and population rules; preserved result snapshot.",
+          "measures": [
+            "enrolled",
+            "new_enrollments",
+            "active"
+          ],
+          "publication_id": "PUBL-RPT-NV-ENROLL-GRADE-20260918",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-REPORT-PRIOR-ENROLLMENT"
+        }
+      ]
+    },
+    {
+      "id": "RPT-NV-ATT-2026",
+      "title": "Attendance and Chronic Absence",
+      "dataset_id": "DS-K12-ATTENDANCE-GOLD",
+      "purpose_id": "PUR-ATTENDANCE",
+      "kind": "Attendance",
+      "summary": "Curated attendance measures with independent limited-use exclusions.",
+      "group": "attendance",
+      "published_version": "2.0",
+      "published_at": "2026-10-10T10:00:00Z",
+      "period": "2026–27",
+      "owner": "District Analytics Office",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-ATTENDANCE-GOLD-20261009",
+      "classification": "Restricted",
+      "status": "Published",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "2.0",
+          "state": "Published",
+          "published_at": "2026-10-10T10:00:00Z",
+          "summary": "Current approved reporting definition",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-ATT-2026-CURRENT",
+          "source_cutoff": "2026-10-10T08:00:00Z",
+          "definition_change": "Current approved measure definitions and reporting population.",
+          "measures": [
+            "attendance_rate",
+            "chronic_rate",
+            "eligible_sessions"
+          ],
+          "publication_id": "PUBL-RPT-NV-ATT-2026-20261010",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-ATTENDANCE-GOLD-20261009"
+        },
+        {
+          "version": "1.0",
+          "state": "Superseded",
+          "published_at": "2026-09-18T10:00:00Z",
+          "summary": "Earlier reporting definition retained for historical reference",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-ATT-2026-PRIOR",
+          "source_cutoff": "2026-09-17T19:00:00Z",
+          "definition_change": "Earlier approved calculation and population rules; preserved result snapshot.",
+          "measures": [
+            "attendance_rate",
+            "eligible_sessions"
+          ],
+          "publication_id": "PUBL-RPT-NV-ATT-2026-20260918",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-REPORT-PRIOR-ATTENDANCE"
+        }
+      ],
+      "limited_use": true
+    },
+    {
+      "id": "RPT-NV-OUTCOMES",
+      "title": "De-identified Learning Outcomes",
+      "dataset_id": "DS-K12-DEID-RESEARCH",
+      "purpose_id": "PUR-RESEARCH",
+      "kind": "Outcomes",
+      "summary": "Aggregate academic proficiency trends using de-identified data.",
+      "group": "outcomes",
+      "published_version": "1.7",
+      "published_at": "2026-10-10T10:00:00Z",
+      "period": "2026–27",
+      "owner": "District Analytics Office",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-DEID-RESEARCH-20261009",
+      "classification": "Controlled",
+      "status": "Published",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "1.7",
+          "state": "Published",
+          "published_at": "2026-10-10T10:00:00Z",
+          "summary": "Current approved reporting definition",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-OUTCOMES-CURRENT",
+          "source_cutoff": "2026-10-10T08:00:00Z",
+          "definition_change": "Current approved measure definitions and reporting population.",
+          "measures": [
+            "participants",
+            "proficient_count",
+            "proficiency_pct"
+          ],
+          "publication_id": "PUBL-RPT-NV-OUTCOMES-20261010",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-DEID-RESEARCH-20261009"
+        },
+        {
+          "version": "1.0",
+          "state": "Superseded",
+          "published_at": "2026-09-18T10:00:00Z",
+          "summary": "Earlier reporting definition retained for historical reference",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-OUTCOMES-PRIOR",
+          "source_cutoff": "2026-09-17T19:00:00Z",
+          "definition_change": "Earlier approved calculation and population rules; preserved result snapshot.",
+          "measures": [
+            "participants",
+            "proficient_count",
+            "proficiency_pct"
+          ],
+          "publication_id": "PUBL-RPT-NV-OUTCOMES-20260918",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-REPORT-PRIOR-OUTCOMES"
+        }
+      ]
+    },
+    {
+      "id": "RPT-NV-LMS-ENGAGEMENT",
+      "title": "Learning Activity Participation",
+      "dataset_id": "DS-K12-LMS-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "kind": "Engagement",
+      "summary": "Learning engagement and participation from the LMS.",
+      "group": "learning",
+      "published_version": "1.3",
+      "published_at": "2026-10-10T10:00:00Z",
+      "period": "2026–27",
+      "owner": "District Analytics Office",
+      "quality_evidence_id": "CERT-K12-LMS-MAP-20260922",
+      "classification": "Restricted",
+      "status": "Published",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "1.3",
+          "state": "Published",
+          "published_at": "2026-10-10T10:00:00Z",
+          "summary": "Current approved reporting definition",
+          "dataset_schema": "1.0.0"
+        },
+        {
+          "version": "1.0",
+          "state": "Superseded",
+          "published_at": "2026-09-18T10:00:00Z",
+          "summary": "Earlier reporting definition retained for historical reference",
+          "dataset_schema": "1.0.0"
+        }
+      ]
+    },
+    {
+      "id": "RPT-NV-SPED-SUPPORT",
+      "title": "Student Support & Accommodations",
+      "dataset_id": "DS-K12-SPED-SILVER",
+      "purpose_id": "PURP-STUDENT-SUPPORT",
+      "kind": "Student Support",
+      "summary": "Protected student support reporting with restricted access.",
+      "group": "support",
+      "published_version": "1.1",
+      "published_at": "2026-10-10T10:00:00Z",
+      "period": "2026–27",
+      "owner": "District Analytics Office",
+      "quality_evidence_id": "EVD-MRLS-DATASET-DS-K12-SPED-SILVER",
+      "classification": "Highly Restricted",
+      "status": "Published",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "1.1",
+          "state": "Published",
+          "published_at": "2026-10-10T10:00:00Z",
+          "summary": "Current approved reporting definition",
+          "dataset_schema": "1.0.0"
+        },
+        {
+          "version": "1.0",
+          "state": "Superseded",
+          "published_at": "2026-09-18T10:00:00Z",
+          "summary": "Earlier reporting definition retained for historical reference",
+          "dataset_schema": "1.0.0"
+        }
+      ]
+    },
+    {
+      "id": "RPT-NV-ATT-EXCLUSION-REVIEW",
+      "title": "Attendance Exception Cohort — Returned",
+      "dataset_id": "DS-K12-ATTENDANCE-GOLD",
+      "purpose_id": "PUR-OPERATIONAL",
+      "kind": "Attendance",
+      "summary": "Illustrative exception-cohort publication returned for updated quality and minimum-population evidence.",
+      "group": "attendance",
+      "published_version": "0.9",
+      "published_at": "2026-10-12T14:00:00Z",
+      "period": "2026–27",
+      "owner": "District Reporting Owner",
+      "quality_evidence_id": "EVD-ATT-EXCLUSION-RETURN-20261012",
+      "classification": "Restricted",
+      "status": "Returned",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "0.9",
+          "state": "Returned",
+          "published_at": "2026-10-12T14:00:00Z",
+          "summary": "Draft returned for cohort population proof",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-ATT-EXCLUSION-DRAFT",
+          "source_cutoff": "2026-10-12T09:00:00Z",
+          "definition_change": "Proposed minimum-cell and exception-cohort logic",
+          "measures": [
+            "attendance_rate",
+            "eligible_sessions"
+          ],
+          "publication_id": "PUBL-RPT-NV-ATT-EXCEPTION-RETURN-20261012",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-ATT-EXCLUSION-RETURN-20261012"
+        }
+      ]
+    },
+    {
+      "id": "RPT-NV-RESEARCH-REVIEW",
+      "title": "Research Outcomes — Definition Review",
+      "dataset_id": "DS-K12-DEID-RESEARCH",
+      "purpose_id": "PUR-RESEARCH",
+      "kind": "Outcomes",
+      "summary": "Proposed metric revision awaiting independent publication; not available for current analysis.",
+      "group": "outcomes",
+      "published_version": "2.0",
+      "published_at": "2026-10-13T10:30:00Z",
+      "period": "2026–27",
+      "owner": "District Analytics Office",
+      "quality_evidence_id": "EVD-OUTCOMES-DEFINITION-REVIEW-20261013",
+      "classification": "Restricted",
+      "status": "In Review",
+      "available_scopes": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "versions": [
+        {
+          "version": "2.0",
+          "state": "In Review",
+          "published_at": "2026-10-13T10:30:00Z",
+          "summary": "Independent metric definition review pending",
+          "dataset_schema": "1.0.0",
+          "snapshot_id": "PUB-RPT-NV-RESEARCH-DRAFT",
+          "source_cutoff": "2026-10-12T18:00:00Z",
+          "definition_change": "Proposed subject assessment participation exclusions",
+          "measures": [
+            "proficiency_pct",
+            "participants"
+          ],
+          "publication_id": "PUBL-RPT-NV-RESEARCH-REVIEW",
+          "approval_authority": "District Reporting Owner",
+          "quality_evidence_id": "EVD-OUTCOMES-DEFINITION-REVIEW-20261013"
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "DASH-NV-ENROLL",
+      "title": "Enrollment Pulse",
+      "dataset_id": "DS-K12-STUDENT-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "report_id": "RPT-NV-ENROLL-2026",
+      "group": "enrollment",
+      "summary": "Monitor district enrollment, grade patterns and school-level changes.",
+      "measures": [
+        "enrolled",
+        "new_enrollments",
+        "withdrawals"
+      ],
+      "featured": true,
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009",
+      "status": "Published",
+      "version": "1.4",
+      "published_at": "2026-10-10T10:00:00Z",
+      "owner": "District Analytics Office"
+    },
+    {
+      "id": "DASH-NV-MOBILITY",
+      "title": "Student Mobility Monitor",
+      "dataset_id": "DS-K12-STUDENT-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "report_id": "RPT-NV-ENROLL-GRADE",
+      "group": "enrollment",
+      "summary": "Compare new enrollment and withdrawals over reporting years.",
+      "measures": [
+        "new_enrollments",
+        "withdrawals",
+        "active"
+      ],
+      "featured": false,
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009",
+      "status": "Published",
+      "version": "1.4",
+      "published_at": "2026-10-10T10:00:00Z",
+      "owner": "District Analytics Office"
+    },
+    {
+      "id": "DASH-NV-ATT",
+      "title": "Attendance Signals",
+      "dataset_id": "DS-K12-ATTENDANCE-GOLD",
+      "purpose_id": "PUR-ATTENDANCE",
+      "report_id": "RPT-NV-ATT-2026",
+      "group": "attendance",
+      "summary": "Review eligible attendance trends, quality exclusions and chronic absence.",
+      "measures": [
+        "attendance_rate",
+        "chronic_rate",
+        "eligible_sessions"
+      ],
+      "featured": true,
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-ATTENDANCE-GOLD-20261009",
+      "status": "Published",
+      "version": "1.4",
+      "published_at": "2026-10-10T10:00:00Z",
+      "owner": "District Analytics Office"
+    },
+    {
+      "id": "DASH-NV-RESEARCH",
+      "title": "Student Outcomes Trends",
+      "dataset_id": "DS-K12-DEID-RESEARCH",
+      "purpose_id": "PUR-RESEARCH",
+      "report_id": "RPT-NV-OUTCOMES",
+      "group": "outcomes",
+      "summary": "Explore de-identified subject proficiency and year-over-year comparison.",
+      "measures": [
+        "proficiency_pct",
+        "participants",
+        "proficient_count"
+      ],
+      "featured": true,
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-DEID-RESEARCH-20261009",
+      "status": "Published",
+      "version": "1.4",
+      "published_at": "2026-10-10T10:00:00Z",
+      "owner": "District Analytics Office"
+    },
+    {
+      "id": "DASH-NV-ENGAGEMENT",
+      "title": "Learning Activity Trends",
+      "dataset_id": "DS-K12-LMS-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "report_id": "RPT-NV-LMS-ENGAGEMENT",
+      "group": "learning",
+      "summary": "Subject and school-level LMS participation.",
+      "measures": [
+        "active_learners"
+      ],
+      "featured": false,
+      "quality_evidence_id": "CERT-K12-LMS-MAP-20260922",
+      "status": "Published",
+      "version": "1.4",
+      "published_at": "2026-10-10T10:00:00Z",
+      "owner": "District Analytics Office"
+    },
+    {
+      "id": "DASH-NV-ATT-ON-HOLD",
+      "title": "Attendance Intervention Cohort — On Hold",
+      "dataset_id": "DS-K12-ATTENDANCE-GOLD",
+      "purpose_id": "PUR-OPERATIONAL",
+      "report_id": "RPT-NV-ATT-EXCLUSION-REVIEW",
+      "group": "attendance",
+      "summary": "Illustrative dashboard blocked until the associated exception-cohort publication is approved.",
+      "measures": [
+        "attendance_rate",
+        "eligible_sessions"
+      ],
+      "featured": false,
+      "quality_evidence_id": "EVD-ATT-EXCLUSION-RETURN-20261012",
+      "status": "On Hold",
+      "version": "0.9",
+      "published_at": "2026-10-12T14:00:00Z",
+      "owner": "District Reporting Owner"
+    }
+  ],
+  "aggregates": {
+    "enrollment": [
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "grade": "09",
+        "enrolled": 282,
+        "new_enrollments": 21,
+        "withdrawals": 4,
+        "active": 278
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "grade": "10",
+        "enrolled": 288,
+        "new_enrollments": 22,
+        "withdrawals": 4,
+        "active": 284
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "grade": "11",
+        "enrolled": 295,
+        "new_enrollments": 22,
+        "withdrawals": 4,
+        "active": 291
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "grade": "12",
+        "enrolled": 302,
+        "new_enrollments": 23,
+        "withdrawals": 4,
+        "active": 298
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "grade": "06",
+        "enrolled": 232,
+        "new_enrollments": 20,
+        "withdrawals": 3,
+        "active": 229
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "grade": "07",
+        "enrolled": 243,
+        "new_enrollments": 21,
+        "withdrawals": 3,
+        "active": 240
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "grade": "08",
+        "enrolled": 253,
+        "new_enrollments": 22,
+        "withdrawals": 3,
+        "active": 250
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "grade": "03",
+        "enrolled": 217,
+        "new_enrollments": 21,
+        "withdrawals": 3,
+        "active": 214
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "grade": "04",
+        "enrolled": 227,
+        "new_enrollments": 22,
+        "withdrawals": 3,
+        "active": 224
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "grade": "05",
+        "enrolled": 238,
+        "new_enrollments": 24,
+        "withdrawals": 3,
+        "active": 235
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "grade": "09",
+        "enrolled": 295,
+        "new_enrollments": 22,
+        "withdrawals": 4,
+        "active": 291
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "grade": "10",
+        "enrolled": 302,
+        "new_enrollments": 23,
+        "withdrawals": 4,
+        "active": 298
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "grade": "11",
+        "enrolled": 309,
+        "new_enrollments": 23,
+        "withdrawals": 4,
+        "active": 305
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "grade": "12",
+        "enrolled": 316,
+        "new_enrollments": 24,
+        "withdrawals": 4,
+        "active": 312
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "grade": "06",
+        "enrolled": 243,
+        "new_enrollments": 21,
+        "withdrawals": 3,
+        "active": 240
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "grade": "07",
+        "enrolled": 254,
+        "new_enrollments": 22,
+        "withdrawals": 3,
+        "active": 251
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "grade": "08",
+        "enrolled": 265,
+        "new_enrollments": 23,
+        "withdrawals": 3,
+        "active": 262
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "grade": "03",
+        "enrolled": 227,
+        "new_enrollments": 22,
+        "withdrawals": 3,
+        "active": 224
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "grade": "04",
+        "enrolled": 238,
+        "new_enrollments": 24,
+        "withdrawals": 3,
+        "active": 235
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "grade": "05",
+        "enrolled": 249,
+        "new_enrollments": 25,
+        "withdrawals": 3,
+        "active": 246
+      }
+    ],
+    "attendance": [
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "period": "Aug",
+        "attendance_rate": 93.62,
+        "eligible_sessions": 2162,
+        "absence_sessions": 138,
+        "chronic_rate": 12.62,
+        "attended_sessions": 2024,
+        "eligible_students": 301,
+        "chronically_absent_students": 38,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "period": "Sep",
+        "attendance_rate": 94.68,
+        "eligible_sessions": 2162,
+        "absence_sessions": 115,
+        "chronic_rate": 11.96,
+        "attended_sessions": 2047,
+        "eligible_students": 301,
+        "chronically_absent_students": 36,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "period": "Oct",
+        "attendance_rate": 95.28,
+        "eligible_sessions": 2162,
+        "absence_sessions": 102,
+        "chronic_rate": 11.3,
+        "attended_sessions": 2060,
+        "eligible_students": 301,
+        "chronically_absent_students": 34,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "period": "Aug",
+        "attendance_rate": 92.79,
+        "eligible_sessions": 2510,
+        "absence_sessions": 181,
+        "chronic_rate": 14.29,
+        "attended_sessions": 2329,
+        "eligible_students": 245,
+        "chronically_absent_students": 35,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "period": "Sep",
+        "attendance_rate": 93.9,
+        "eligible_sessions": 2510,
+        "absence_sessions": 153,
+        "chronic_rate": 13.47,
+        "attended_sessions": 2357,
+        "eligible_students": 245,
+        "chronically_absent_students": 33,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "period": "Oct",
+        "attendance_rate": 94.5,
+        "eligible_sessions": 2510,
+        "absence_sessions": 138,
+        "chronic_rate": 13.06,
+        "attended_sessions": 2372,
+        "eligible_students": 245,
+        "chronically_absent_students": 32,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "period": "Aug",
+        "attendance_rate": 91.92,
+        "eligible_sessions": 2858,
+        "absence_sessions": 231,
+        "chronic_rate": 15.65,
+        "attended_sessions": 2627,
+        "eligible_students": 230,
+        "chronically_absent_students": 36,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "period": "Sep",
+        "attendance_rate": 93.0,
+        "eligible_sessions": 2858,
+        "absence_sessions": 200,
+        "chronic_rate": 14.78,
+        "attended_sessions": 2658,
+        "eligible_students": 230,
+        "chronically_absent_students": 34,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "period": "Oct",
+        "attendance_rate": 93.6,
+        "eligible_sessions": 2858,
+        "absence_sessions": 183,
+        "chronic_rate": 14.35,
+        "attended_sessions": 2675,
+        "eligible_students": 230,
+        "chronically_absent_students": 33,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "period": "Aug",
+        "attendance_rate": 94.09,
+        "eligible_sessions": 2300,
+        "absence_sessions": 136,
+        "chronic_rate": 12.74,
+        "attended_sessions": 2164,
+        "eligible_students": 314,
+        "chronically_absent_students": 40,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "period": "Sep",
+        "attendance_rate": 95.22,
+        "eligible_sessions": 2300,
+        "absence_sessions": 110,
+        "chronic_rate": 11.78,
+        "attended_sessions": 2190,
+        "eligible_students": 314,
+        "chronically_absent_students": 37,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "period": "Oct",
+        "attendance_rate": 95.78,
+        "eligible_sessions": 2300,
+        "absence_sessions": 97,
+        "chronic_rate": 11.46,
+        "attended_sessions": 2203,
+        "eligible_students": 314,
+        "chronically_absent_students": 36,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "period": "Aug",
+        "attendance_rate": 93.3,
+        "eligible_sessions": 2670,
+        "absence_sessions": 179,
+        "chronic_rate": 13.95,
+        "attended_sessions": 2491,
+        "eligible_students": 258,
+        "chronically_absent_students": 36,
+        "quality_excluded_source_records": 140,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "period": "Sep",
+        "attendance_rate": 94.38,
+        "eligible_sessions": 2670,
+        "absence_sessions": 150,
+        "chronic_rate": 13.18,
+        "attended_sessions": 2520,
+        "eligible_students": 258,
+        "chronically_absent_students": 34,
+        "quality_excluded_source_records": 146,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "period": "Oct",
+        "attendance_rate": 94.98,
+        "eligible_sessions": 2670,
+        "absence_sessions": 134,
+        "chronic_rate": 12.79,
+        "attended_sessions": 2536,
+        "eligible_students": 258,
+        "chronically_absent_students": 33,
+        "quality_excluded_source_records": 147,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "period": "Aug",
+        "attendance_rate": 92.4,
+        "eligible_sessions": 3040,
+        "absence_sessions": 231,
+        "chronic_rate": 15.64,
+        "attended_sessions": 2809,
+        "eligible_students": 243,
+        "chronically_absent_students": 38,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "period": "Sep",
+        "attendance_rate": 93.49,
+        "eligible_sessions": 3040,
+        "absence_sessions": 198,
+        "chronic_rate": 14.81,
+        "attended_sessions": 2842,
+        "eligible_students": 243,
+        "chronically_absent_students": 36,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "period": "Oct",
+        "attendance_rate": 94.11,
+        "eligible_sessions": 3040,
+        "absence_sessions": 179,
+        "chronic_rate": 14.4,
+        "attended_sessions": 2861,
+        "eligible_students": 243,
+        "chronically_absent_students": 35,
+        "quality_excluded_source_records": 0,
+        "population_unit": "Eligible student-month observations",
+        "quality_decision_id": null
+      }
+    ],
+    "outcomes": [
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "domain": "Mathematics",
+        "participants": 290,
+        "proficiency_pct": 68.97,
+        "proficient_count": 200,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "domain": "Reading",
+        "participants": 290,
+        "proficiency_pct": 72.41,
+        "proficient_count": 210,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2025-26",
+        "domain": "Science",
+        "participants": 290,
+        "proficiency_pct": 75.52,
+        "proficient_count": 219,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "domain": "Mathematics",
+        "participants": 325,
+        "proficiency_pct": 71.38,
+        "proficient_count": 232,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "domain": "Reading",
+        "participants": 325,
+        "proficiency_pct": 74.77,
+        "proficient_count": 243,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2025-26",
+        "domain": "Science",
+        "participants": 325,
+        "proficiency_pct": 78.15,
+        "proficient_count": 254,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "domain": "Mathematics",
+        "participants": 360,
+        "proficiency_pct": 73.89,
+        "proficient_count": 266,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "domain": "Reading",
+        "participants": 360,
+        "proficiency_pct": 77.22,
+        "proficient_count": 278,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2025-26",
+        "domain": "Science",
+        "participants": 360,
+        "proficiency_pct": 80.56,
+        "proficient_count": 290,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "domain": "Mathematics",
+        "participants": 302,
+        "proficiency_pct": 71.19,
+        "proficient_count": 215,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "domain": "Reading",
+        "participants": 302,
+        "proficiency_pct": 74.5,
+        "proficient_count": 225,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-HS01",
+        "organization": "North Valley High School",
+        "school_year": "2026-27",
+        "domain": "Science",
+        "participants": 302,
+        "proficiency_pct": 77.81,
+        "proficient_count": 235,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "domain": "Mathematics",
+        "participants": 338,
+        "proficiency_pct": 73.67,
+        "proficient_count": 249,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "domain": "Reading",
+        "participants": 338,
+        "proficiency_pct": 76.92,
+        "proficient_count": 260,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-MS01",
+        "organization": "North Valley Middle School",
+        "school_year": "2026-27",
+        "domain": "Science",
+        "participants": 338,
+        "proficiency_pct": 80.18,
+        "proficient_count": 271,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "domain": "Mathematics",
+        "participants": 374,
+        "proficiency_pct": 76.2,
+        "proficient_count": 285,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "domain": "Reading",
+        "participants": 374,
+        "proficiency_pct": 79.41,
+        "proficient_count": 297,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      },
+      {
+        "organization_id": "ORG-NVUSD-ES01",
+        "organization": "Riverbend Elementary School",
+        "school_year": "2026-27",
+        "domain": "Science",
+        "participants": 374,
+        "proficiency_pct": 82.89,
+        "proficient_count": 310,
+        "counting_unit": "Subject assessment participation",
+        "unique_students": null
+      }
+    ]
+  },
+  "state_applications": [
+    {
+      "id": "APP-STATE-REPORTING",
+      "name": "State Reporting Portal",
+      "description": "Submit and review approved reporting packages through state services.",
+      "category": "State reporting",
+      "status": "Available for discovery",
+      "access": "Requires separate state-service agreement",
+      "route": "../consumer/export-requests-history.html",
+      "owner": "State Services Office",
+      "participation_id": "PART-NV-STATE-001",
+      "participation_state": "Accepted",
+      "agreement_version": "v7",
+      "agreement_effective_at": "2026-09-01T00:00:00Z",
+      "agreement_expires_at": "2027-06-30T23:59:00Z",
+      "access_state": "Eligible — launch verification required",
+      "approved_request_id": "APPREQ-NV-20261001-011",
+      "decision_at": "2026-10-01T14:00:00Z",
+      "launches": [
+        {
+          "id": "APP-LAUNCH-NV-20261008-011",
+          "requested_at": "2026-10-08T11:00:00Z",
+          "confirmed_at": "2026-10-08T11:02:00Z",
+          "status": "Completed",
+          "authority": "State Identity Federation",
+          "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST"
+        }
+      ],
+      "events": [
+        {
+          "at": "2026-09-01T00:00:00Z",
+          "event": "Participation accepted",
+          "authority": "State Services Office"
+        },
+        {
+          "at": "2026-10-01T14:00:00Z",
+          "event": "Access approved",
+          "authority": "State Application Authority"
+        },
+        {
+          "at": "2026-10-08T11:02:00Z",
+          "event": "Previous launch verified",
+          "authority": "State Identity Federation"
+        }
+      ],
+      "access_decision": {
+        "state": "Approved",
+        "reference": "APPREQ-NV-20261001-011",
+        "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+        "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+        "organization_ids": [
+          "ORG-NVUSD-ROOT"
+        ],
+        "decided_at": "2026-10-01T14:00:00Z",
+        "effective_from": "2026-10-01T14:00:00Z",
+        "effective_until": "2027-06-30T23:59:00Z",
+        "authority": "State Application Access Authority"
+      }
+    },
+    {
+      "id": "APP-STATE-PROGRAMS",
+      "name": "State Program Outcomes",
+      "description": "Review published program reports under the state participation agreement.",
+      "category": "State application",
+      "status": "Eligibility review required",
+      "access": "Agreement approval pending",
+      "route": "../consumer/request-access.html",
+      "owner": "State Services Office",
+      "participation_id": "PART-NV-STATE-002",
+      "participation_state": "Agreement review pending",
+      "agreement_version": "v7",
+      "access_state": "Blocked — participation pending",
+      "launches": [],
+      "events": [
+        {
+          "at": "2026-10-08T10:00:00Z",
+          "event": "Participation request returned for agreement evidence",
+          "authority": "Tenant Administration"
+        }
+      ],
+      "access_decision": {
+        "state": "Pending",
+        "reference": "APPREQ-NV-20261009-012",
+        "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+        "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+        "organization_ids": [
+          "ORG-NVUSD-ROOT"
+        ],
+        "decided_at": null,
+        "effective_from": null,
+        "effective_until": null,
+        "authority": "State Application Access Authority"
+      }
+    },
+    {
+      "id": "APP-DISTRICT-PUBLISH",
+      "name": "District Publishing Portal",
+      "description": "View governed publication status for institution-wide reports.",
+      "category": "State application",
+      "status": "Available for discovery",
+      "access": "Application-specific authentication required",
+      "route": "../consumer/catalog-browse.html",
+      "owner": "State Services Office",
+      "participation_id": "PART-NV-STATE-003",
+      "participation_state": "Accepted",
+      "agreement_version": "v6",
+      "agreement_effective_at": "2026-07-01T00:00:00Z",
+      "agreement_expires_at": "2026-10-05T23:59:00Z",
+      "access_state": "Expired — renewal required",
+      "launches": [
+        {
+          "id": "APP-LAUNCH-NV-20260912-003",
+          "requested_at": "2026-09-12T08:00:00Z",
+          "confirmed_at": "2026-09-12T08:03:00Z",
+          "status": "Completed",
+          "authority": "State Identity Federation",
+          "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST"
+        }
+      ],
+      "events": [
+        {
+          "at": "2026-10-05T23:59:00Z",
+          "event": "Participation agreement expired",
+          "authority": "State Services Office"
+        }
+      ],
+      "access_decision": {
+        "state": "Approved",
+        "reference": "APPREQ-NV-20261001-013",
+        "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+        "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+        "organization_ids": [
+          "ORG-NVUSD-ROOT"
+        ],
+        "decided_at": "2026-10-01T13:00:00Z",
+        "effective_from": "2026-10-01T13:00:00Z",
+        "effective_until": "2026-10-05T23:59:00Z",
+        "authority": "State Application Access Authority"
+      }
+    },
+    {
+      "category": "State application",
+      "status": "Available for discovery",
+      "access": "Independent state-service eligibility required",
+      "route": "../consumer/request-access.html",
+      "owner": "State Services Office",
+      "agreement_version": "v7",
+      "agreement_effective_at": "2026-09-01T00:00:00Z",
+      "agreement_expires_at": "2027-06-30T23:59:00Z",
+      "events": [
+        {
+          "at": "2026-10-08T12:00:00Z",
+          "event": "Application access denied — separate authorization required",
+          "authority": "State Application Access Authority"
+        }
+      ],
+      "launches": [],
+      "id": "APP-STATE-ASSESSMENT",
+      "name": "State Assessment Explorer",
+      "description": "Explore permitted statewide assessment reporting through a separately authorized state service.",
+      "participation_id": "PART-NV-STATE-004",
+      "participation_state": "Accepted",
+      "access_state": "Denied — independent access review",
+      "approved_request_id": null,
+      "decision_at": "2026-10-08T12:00:00Z",
+      "access_decision": {
+        "state": "Denied",
+        "reference": "APPREQ-NV-20261008-014",
+        "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+        "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+        "organization_ids": [
+          "ORG-NVUSD-ROOT"
+        ],
+        "decided_at": "2026-10-08T12:00:00Z",
+        "effective_from": null,
+        "effective_until": null,
+        "authority": "State Application Access Authority"
+      }
+    },
+    {
+      "category": "State application",
+      "status": "Available for discovery",
+      "access": "Independent state-service eligibility required",
+      "route": "../consumer/request-access.html",
+      "owner": "State Services Office",
+      "agreement_version": "v7",
+      "agreement_effective_at": "2026-09-01T00:00:00Z",
+      "agreement_expires_at": "2027-06-30T23:59:00Z",
+      "events": [
+        {
+          "at": "2026-10-10T12:30:00Z",
+          "event": "Application access approved — effective November 1",
+          "authority": "State Application Access Authority"
+        }
+      ],
+      "launches": [],
+      "id": "APP-STATE-WORKFORCE",
+      "name": "State Workforce Pathways",
+      "description": "Review career-readiness pathway indicators through authorized state services after a future-effective approval.",
+      "participation_id": "PART-NV-STATE-005",
+      "participation_state": "Accepted",
+      "access_state": "Approved — Future Effective",
+      "approved_request_id": "APPREQ-NV-20261010-015",
+      "decision_at": "2026-10-10T12:30:00Z",
+      "access_decision": {
+        "state": "Approved",
+        "reference": "APPREQ-NV-20261010-015",
+        "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+        "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+        "organization_ids": [
+          "ORG-NVUSD-ROOT"
+        ],
+        "decided_at": "2026-10-10T12:30:00Z",
+        "effective_from": "2026-11-01T00:00:00Z",
+        "effective_until": "2027-06-30T23:59:00Z",
+        "authority": "State Application Access Authority"
+      }
+    }
+  ],
+  "bi_tools": [
+    {
+      "id": "BI-POWERBI",
+      "name": "Power BI Reporting",
+      "description": "Explore approved district measures in a governed BI workspace.",
+      "modes": [
+        "Managed report",
+        "Read-only dataset"
+      ],
+      "certified": true,
+      "allowed_dataset_ids": [
+        "DS-K12-STUDENT-SILVER",
+        "DS-K12-ATTENDANCE-GOLD",
+        "DS-K12-DEID-RESEARCH"
+      ],
+      "reviewed_at": "2026-10-09T11:00:00Z",
+      "current": true
+    },
+    {
+      "id": "BI-TABLEAU",
+      "name": "Tableau Analytics",
+      "description": "Open preapproved visualizations with purpose-specific data rights.",
+      "modes": [
+        "Managed report"
+      ],
+      "certified": true,
+      "allowed_dataset_ids": [
+        "DS-K12-STUDENT-SILVER",
+        "DS-K12-DEID-RESEARCH"
+      ],
+      "reviewed_at": "2026-10-09T11:00:00Z",
+      "current": true
+    },
+    {
+      "id": "BI-LOOKER",
+      "name": "Looker Studio",
+      "description": "Use governed exploration templates when supported.",
+      "modes": [
+        "Managed report"
+      ],
+      "certified": true,
+      "allowed_dataset_ids": [
+        "DS-K12-STUDENT-SILVER",
+        "DS-K12-DEID-RESEARCH"
+      ],
+      "reviewed_at": "2026-10-09T11:00:00Z",
+      "current": true
+    },
+    {
+      "id": "BI-NOTEBOOK",
+      "name": "Research Notebook",
+      "description": "De-identified research analysis only.",
+      "modes": [
+        "Read-only dataset"
+      ],
+      "certified": true,
+      "allowed_dataset_ids": [
+        "DS-K12-DEID-RESEARCH"
+      ],
+      "reviewed_at": "2026-10-09T11:00:00Z",
+      "current": true
+    },
+    {
+      "id": "BI-EXCEL",
+      "name": "Managed Excel",
+      "description": "Consume published reporting extracts under a governed license and current approved purpose.",
+      "modes": [
+        "Managed report"
+      ],
+      "certified": true,
+      "allowed_dataset_ids": [
+        "DS-K12-STUDENT-SILVER",
+        "DS-K12-DEID-RESEARCH"
+      ],
+      "reviewed_at": "2026-10-09T11:00:00Z",
+      "current": true
+    }
+  ],
+  "bi_sessions": [
+    {
+      "id": "EXTSES-NV-PBI-STUDENT-20260922-01",
+      "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "tool_id": "BI-POWERBI",
+      "dataset_id": "DS-K12-STUDENT-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "state": "Expired",
+      "created_at": "2026-09-22T11:00:00Z",
+      "expires_at": "2026-09-22T17:00:00Z",
+      "last_activity_at": "2026-09-22T12:05:00Z",
+      "events": [
+        {
+          "at": "2026-09-22T11:00:00Z",
+          "label": "Connected after service confirmation",
+          "actor": "Federated BI Gateway"
+        },
+        {
+          "at": "2026-09-22T17:00:00Z",
+          "label": "Expired automatically",
+          "actor": "Federated BI Gateway"
+        }
+      ]
+    },
+    {
+      "id": "EXTSES-NV-RESEARCH-20261010-01",
+      "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "tool_id": "BI-LOOKER",
+      "dataset_id": "DS-K12-DEID-RESEARCH",
+      "purpose_id": "PUR-RESEARCH",
+      "state": "Disconnected",
+      "created_at": "2026-10-10T08:30:00Z",
+      "expires_at": "2026-10-10T18:30:00Z",
+      "last_activity_at": "2026-10-10T10:05:00Z",
+      "events": [
+        {
+          "at": "2026-10-10T08:30:00Z",
+          "label": "Connection requested",
+          "actor": "Data Consumer"
+        },
+        {
+          "at": "2026-10-10T08:45:00Z",
+          "label": "Connection confirmed",
+          "actor": "Federated BI Gateway"
+        },
+        {
+          "at": "2026-10-10T10:05:00Z",
+          "label": "Disconnect verified",
+          "actor": "Federated BI Gateway"
+        }
+      ],
+      "connected_at": "2026-10-10T08:45:00Z",
+      "disconnected_at": "2026-10-10T10:05:00Z",
+      "service_confirmation": {
+        "state": "Disconnected",
+        "confirmed_at": "2026-10-10T10:05:00Z",
+        "authority": "Federated BI Gateway",
+        "closure_id": "BI-CLOSE-NV-20261010-01"
+      }
+    },
+    {
+      "id": "EXTSES-NV-ATT-20261009-01",
+      "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "tool_id": "BI-TABLEAU",
+      "dataset_id": "DS-K12-ATTENDANCE-GOLD",
+      "purpose_id": "PUR-ATTENDANCE",
+      "state": "Revoked",
+      "created_at": "2026-10-09T10:00:00Z",
+      "expires_at": "2026-10-16T10:00:00Z",
+      "last_activity_at": "2026-10-09T10:30:00Z",
+      "events": [
+        {
+          "at": "2026-10-09T10:00:00Z",
+          "label": "Previously confirmed connection",
+          "actor": "Federated BI Gateway"
+        },
+        {
+          "at": "2026-10-09T10:30:00Z",
+          "label": "Access independently revoked",
+          "actor": "Access Authority"
+        }
+      ],
+      "revoked_at": "2026-10-09T10:30:00Z"
+    },
+    {
+      "id": "EXTSES-NV-PBI-20261011-01",
+      "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "tool_id": "BI-POWERBI",
+      "dataset_id": "DS-K12-STUDENT-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "state": "Connected",
+      "created_at": "2026-10-09T09:30:00Z",
+      "expires_at": "2026-10-15T18:00:00Z",
+      "last_activity_at": "2026-10-10T09:00:00Z",
+      "events": [
+        {
+          "at": "2026-10-09T09:30:00Z",
+          "label": "Connection requested",
+          "actor": "Data Consumer"
+        },
+        {
+          "at": "2026-10-09T16:00:00Z",
+          "label": "Connection independently approved",
+          "actor": "Tenant Integration Services"
+        },
+        {
+          "at": "2026-10-10T08:15:00Z",
+          "label": "Service connection confirmed",
+          "actor": "Federated BI Gateway"
+        }
+      ],
+      "approved_at": "2026-10-09T16:00:00Z",
+      "provisioned_at": "2026-10-10T08:05:00Z",
+      "connected_at": "2026-10-10T08:15:00Z",
+      "independent_approval": {
+        "decision_id": "BI-APP-NV-20261009-002",
+        "authority": "Tenant Integration Services",
+        "state": "Approved",
+        "decided_at": "2026-10-09T16:00:00Z"
+      },
+      "service_confirmation": {
+        "connection_id": "BI-CONF-NV-20261010-002",
+        "state": "Connected",
+        "confirmed_at": "2026-10-10T08:15:00Z",
+        "authority": "Federated BI Gateway"
+      }
+    },
+    {
+      "id": "BIREQ-NV-LOOKER-20261010-002",
+      "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "tool_id": "BI-LOOKER",
+      "dataset_id": "DS-K12-DEID-RESEARCH",
+      "purpose_id": "PUR-RESEARCH",
+      "state": "Approved — Fulfillment Pending",
+      "created_at": "2026-10-10T14:00:00Z",
+      "last_activity_at": "2026-10-10T15:00:00Z",
+      "independent_approval": {
+        "decision_id": "BI-APP-NV-20261010-022",
+        "authority": "Tenant Integration Services",
+        "state": "Approved",
+        "decided_at": "2026-10-10T15:00:00Z"
+      },
+      "service_confirmation": null,
+      "events": [
+        {
+          "at": "2026-10-10T14:00:00Z",
+          "label": "Connection requested",
+          "actor": "Data Consumer"
+        },
+        {
+          "at": "2026-10-10T15:00:00Z",
+          "label": "Independently approved; awaiting service provisioning",
+          "actor": "Tenant Integration Services"
+        }
+      ]
+    },
+    {
+      "id": "EXTSES-NV-PBI-DISCONNECT-20261010",
+      "owner_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "tool_id": "BI-POWERBI",
+      "dataset_id": "DS-K12-STUDENT-SILVER",
+      "purpose_id": "PUR-OPERATIONAL",
+      "state": "Disconnect Requested",
+      "created_at": "2026-10-09T07:00:00Z",
+      "approved_at": "2026-10-09T08:00:00Z",
+      "connected_at": "2026-10-09T09:00:00Z",
+      "expires_at": "2026-10-15T18:00:00Z",
+      "last_activity_at": "2026-10-10T16:15:00Z",
+      "disconnect_requested_at": "2026-10-10T16:15:00Z",
+      "independent_approval": {
+        "state": "Approved",
+        "decision_id": "BI-APP-NV-20261009-010",
+        "decided_at": "2026-10-09T08:00:00Z"
+      },
+      "service_confirmation": {
+        "state": "Connected",
+        "confirmed_at": "2026-10-09T09:00:00Z",
+        "authority": "Federated BI Gateway"
+      },
+      "events": [
+        {
+          "at": "2026-10-09T07:00:00Z",
+          "label": "Connection requested",
+          "actor": "Data Consumer"
+        },
+        {
+          "at": "2026-10-09T08:00:00Z",
+          "label": "Access independently approved",
+          "actor": "Tenant Integration Services"
+        },
+        {
+          "at": "2026-10-09T09:00:00Z",
+          "label": "Connection verified",
+          "actor": "Federated BI Gateway"
+        },
+        {
+          "at": "2026-10-10T16:15:00Z",
+          "label": "Disconnect requested; awaiting service closure",
+          "actor": "Data Consumer"
+        }
+      ]
+    }
+  ],
+  "reference": {
+    "catalog": "Consumer Discover Data v5",
+    "query": "Query Workspace v6",
+    "export": "Export Requests v5",
+    "subscriptions": "Subscriptions v5"
+  },
+  "reporting_notes": {
+    "enrollment": "Counts reflect authorized schools and grade-level groups; district-wide coverage is not implied.",
+    "attendance": "Limited-use results follow independent quality approval. Affected source records are excluded before aggregation; chronic-absence percentages use eligible students, not attendance sessions.",
+    "outcomes": "Each subject contributes assessment participations; the same student may appear in more than one subject. Multi-subject totals and weighted proficiency rates are assessment-participation measures, not deduplicated student headcounts. Distinct student counts are not available in this published dataset."
+  },
+  "metric_catalog": {
+    "enrolled": {
+      "name": "Enrolled students",
+      "definition": "Enrollment headcount at the approved reporting cutoff, aggregated by grade.",
+      "basis": "Sum of authorized grade-level enrollment counts",
+      "unit": "students"
+    },
+    "new_enrollments": {
+      "name": "New enrollments",
+      "definition": "New school enrollments recorded for the defined reporting period.",
+      "basis": "Sum of authorized grade-level entrants",
+      "unit": "students"
+    },
+    "withdrawals": {
+      "name": "Withdrawals",
+      "definition": "Withdrawals within the reporting period.",
+      "basis": "Sum of authorized grade-level withdrawals",
+      "unit": "students"
+    },
+    "active": {
+      "name": "Active students",
+      "definition": "Active enrolled students at the reporting cutoff.",
+      "basis": "Sum of authorized grade-level active counts",
+      "unit": "students"
+    },
+    "attendance_rate": {
+      "name": "Attendance rate",
+      "definition": "Share of eligible sessions attended among the authorized reporting population.",
+      "basis": "Attended sessions / eligible sessions × 100",
+      "numerator": "attended_sessions",
+      "denominator": "eligible_sessions",
+      "unit": "%"
+    },
+    "chronic_rate": {
+      "name": "Chronic absence",
+      "definition": "Share of eligible student-month observations marked chronically absent in the selected period. Combining months counts student-month observations, not unique students.",
+      "basis": "Chronically absent student-month observations / eligible student-month observations × 100",
+      "numerator": "chronically_absent_students",
+      "denominator": "eligible_students",
+      "unit": "%"
+    },
+    "eligible_sessions": {
+      "name": "Eligible sessions",
+      "definition": "Attendance sessions remaining eligible after independently approved record exclusions.",
+      "basis": "Sum of eligible sessions after exclusion",
+      "unit": "sessions"
+    },
+    "participants": {
+      "name": "Subject assessment participations",
+      "definition": "Count of assessment participations within the selected subjects and reporting cohorts. The same learner may contribute to more than one subject.",
+      "basis": "Sum of subject-level assessment participation counts; not distinct students",
+      "unit": "subject participations",
+      "counting_unit": "subject-assessment participation",
+      "is_unique_student_count": false
+    },
+    "proficient_count": {
+      "name": "Proficient subject assessments",
+      "definition": "Count of eligible subject assessment participations reaching the approved proficiency threshold; an individual may contribute in multiple subjects.",
+      "basis": "Sum of proficient subject assessment participations",
+      "unit": "subject participations"
+    },
+    "proficiency_pct": {
+      "name": "Assessment participation proficiency rate",
+      "definition": "Proficient subject assessment participations divided by all eligible subject assessment participations. This is not the percentage of distinct students who are proficient in every subject.",
+      "basis": "Proficient subject assessment participations / eligible subject assessment participations × 100",
+      "numerator": "proficient_count",
+      "denominator": "participants",
+      "unit": "%"
+    }
+  },
+  "publication_snapshots": [
+    {
+      "id": "PUB-RPT-NV-ENROLL-2026-CURRENT",
+      "report_id": "RPT-NV-ENROLL-2026",
+      "version": "2.2",
+      "publication_id": "PUBL-RPT-NV-ENROLL-2026-20261010",
+      "published_at": "2026-10-10T10:00:00Z",
+      "source_cutoff": "2026-10-10T08:00:00Z",
+      "status": "Published",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009",
+      "measure_definition_version": "2.2",
+      "historical_use_restricted": false,
+      "historical_use_reason": "",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "09",
+          "enrolled": 282,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 278
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "10",
+          "enrolled": 288,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 284
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "11",
+          "enrolled": 295,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 291
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "12",
+          "enrolled": 302,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 298
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "06",
+          "enrolled": 232,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 229
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "07",
+          "enrolled": 243,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 240
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "08",
+          "enrolled": 253,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 250
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "03",
+          "enrolled": 217,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 214
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "04",
+          "enrolled": 227,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 224
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "05",
+          "enrolled": 238,
+          "new_enrollments": 24,
+          "withdrawals": 3,
+          "active": 235
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "09",
+          "enrolled": 295,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 291
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "10",
+          "enrolled": 302,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 298
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "11",
+          "enrolled": 309,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 305
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "12",
+          "enrolled": 316,
+          "new_enrollments": 24,
+          "withdrawals": 4,
+          "active": 312
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "06",
+          "enrolled": 243,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 240
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "07",
+          "enrolled": 254,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 251
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "08",
+          "enrolled": 265,
+          "new_enrollments": 23,
+          "withdrawals": 3,
+          "active": 262
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "03",
+          "enrolled": 227,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 224
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "04",
+          "enrolled": 238,
+          "new_enrollments": 24,
+          "withdrawals": 3,
+          "active": 235
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "05",
+          "enrolled": 249,
+          "new_enrollments": 25,
+          "withdrawals": 3,
+          "active": 246
+        }
+      ]
+    },
+    {
+      "id": "PUB-RPT-NV-ENROLL-2026-PRIOR",
+      "report_id": "RPT-NV-ENROLL-2026",
+      "version": "1.0",
+      "publication_id": "PUBL-RPT-NV-ENROLL-2026-20260918",
+      "published_at": "2026-09-18T10:00:00Z",
+      "source_cutoff": "2026-09-17T19:00:00Z",
+      "status": "Superseded",
+      "quality_evidence_id": "EVD-REPORT-PRIOR-ENROLLMENT",
+      "measure_definition_version": "1.0",
+      "historical_use_restricted": false,
+      "historical_use_reason": "",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "09",
+          "enrolled": 279,
+          "new_enrollments": 20,
+          "withdrawals": 4,
+          "active": 275
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "10",
+          "enrolled": 285,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 281
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "11",
+          "enrolled": 292,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 288
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "12",
+          "enrolled": 299,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 295
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "06",
+          "enrolled": 229,
+          "new_enrollments": 19,
+          "withdrawals": 3,
+          "active": 226
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "07",
+          "enrolled": 240,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 237
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "08",
+          "enrolled": 250,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 247
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "03",
+          "enrolled": 214,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 211
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "04",
+          "enrolled": 224,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 221
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "05",
+          "enrolled": 235,
+          "new_enrollments": 23,
+          "withdrawals": 3,
+          "active": 232
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "09",
+          "enrolled": 292,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 288
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "10",
+          "enrolled": 299,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 295
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "11",
+          "enrolled": 306,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 302
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "12",
+          "enrolled": 313,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 309
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "06",
+          "enrolled": 240,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 237
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "07",
+          "enrolled": 251,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 248
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "08",
+          "enrolled": 262,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 259
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "03",
+          "enrolled": 224,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 221
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "04",
+          "enrolled": 235,
+          "new_enrollments": 23,
+          "withdrawals": 3,
+          "active": 232
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "05",
+          "enrolled": 246,
+          "new_enrollments": 24,
+          "withdrawals": 3,
+          "active": 243
+        }
+      ]
+    },
+    {
+      "id": "PUB-RPT-NV-ENROLL-GRADE-CURRENT",
+      "report_id": "RPT-NV-ENROLL-GRADE",
+      "version": "1.5",
+      "publication_id": "PUBL-RPT-NV-ENROLL-GRADE-20261010",
+      "published_at": "2026-10-10T10:00:00Z",
+      "source_cutoff": "2026-10-10T08:00:00Z",
+      "status": "Published",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-STUDENT-SILVER-20261009",
+      "measure_definition_version": "1.5",
+      "historical_use_restricted": false,
+      "historical_use_reason": "",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "09",
+          "enrolled": 282,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 278
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "10",
+          "enrolled": 288,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 284
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "11",
+          "enrolled": 295,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 291
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "12",
+          "enrolled": 302,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 298
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "06",
+          "enrolled": 232,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 229
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "07",
+          "enrolled": 243,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 240
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "08",
+          "enrolled": 253,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 250
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "03",
+          "enrolled": 217,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 214
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "04",
+          "enrolled": 227,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 224
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "05",
+          "enrolled": 238,
+          "new_enrollments": 24,
+          "withdrawals": 3,
+          "active": 235
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "09",
+          "enrolled": 295,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 291
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "10",
+          "enrolled": 302,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 298
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "11",
+          "enrolled": 309,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 305
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "12",
+          "enrolled": 316,
+          "new_enrollments": 24,
+          "withdrawals": 4,
+          "active": 312
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "06",
+          "enrolled": 243,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 240
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "07",
+          "enrolled": 254,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 251
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "08",
+          "enrolled": 265,
+          "new_enrollments": 23,
+          "withdrawals": 3,
+          "active": 262
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "03",
+          "enrolled": 227,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 224
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "04",
+          "enrolled": 238,
+          "new_enrollments": 24,
+          "withdrawals": 3,
+          "active": 235
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "05",
+          "enrolled": 249,
+          "new_enrollments": 25,
+          "withdrawals": 3,
+          "active": 246
+        }
+      ]
+    },
+    {
+      "id": "PUB-RPT-NV-ENROLL-GRADE-PRIOR",
+      "report_id": "RPT-NV-ENROLL-GRADE",
+      "version": "1.0",
+      "publication_id": "PUBL-RPT-NV-ENROLL-GRADE-20260918",
+      "published_at": "2026-09-18T10:00:00Z",
+      "source_cutoff": "2026-09-17T19:00:00Z",
+      "status": "Superseded",
+      "quality_evidence_id": "EVD-REPORT-PRIOR-ENROLLMENT",
+      "measure_definition_version": "1.0",
+      "historical_use_restricted": false,
+      "historical_use_reason": "",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "09",
+          "enrolled": 279,
+          "new_enrollments": 20,
+          "withdrawals": 4,
+          "active": 275
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "10",
+          "enrolled": 285,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 281
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "11",
+          "enrolled": 292,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 288
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "grade": "12",
+          "enrolled": 299,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 295
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "06",
+          "enrolled": 229,
+          "new_enrollments": 19,
+          "withdrawals": 3,
+          "active": 226
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "07",
+          "enrolled": 240,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 237
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "grade": "08",
+          "enrolled": 250,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 247
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "03",
+          "enrolled": 214,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 211
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "04",
+          "enrolled": 224,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 221
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "grade": "05",
+          "enrolled": 235,
+          "new_enrollments": 23,
+          "withdrawals": 3,
+          "active": 232
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "09",
+          "enrolled": 292,
+          "new_enrollments": 21,
+          "withdrawals": 4,
+          "active": 288
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "10",
+          "enrolled": 299,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 295
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "11",
+          "enrolled": 306,
+          "new_enrollments": 22,
+          "withdrawals": 4,
+          "active": 302
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "grade": "12",
+          "enrolled": 313,
+          "new_enrollments": 23,
+          "withdrawals": 4,
+          "active": 309
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "06",
+          "enrolled": 240,
+          "new_enrollments": 20,
+          "withdrawals": 3,
+          "active": 237
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "07",
+          "enrolled": 251,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 248
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "grade": "08",
+          "enrolled": 262,
+          "new_enrollments": 22,
+          "withdrawals": 3,
+          "active": 259
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "03",
+          "enrolled": 224,
+          "new_enrollments": 21,
+          "withdrawals": 3,
+          "active": 221
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "04",
+          "enrolled": 235,
+          "new_enrollments": 23,
+          "withdrawals": 3,
+          "active": 232
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "grade": "05",
+          "enrolled": 246,
+          "new_enrollments": 24,
+          "withdrawals": 3,
+          "active": 243
+        }
+      ]
+    },
+    {
+      "id": "PUB-RPT-NV-ATT-2026-CURRENT",
+      "report_id": "RPT-NV-ATT-2026",
+      "version": "2.0",
+      "publication_id": "PUBL-RPT-NV-ATT-2026-20261010",
+      "published_at": "2026-10-10T10:00:00Z",
+      "source_cutoff": "2026-10-10T08:00:00Z",
+      "status": "Published",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-ATTENDANCE-GOLD-20261009",
+      "measure_definition_version": "2.0",
+      "historical_use_restricted": false,
+      "historical_use_reason": "",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "period": "Aug",
+          "attendance_rate": 93.62,
+          "eligible_sessions": 2162,
+          "absence_sessions": 138,
+          "chronic_rate": 12.62,
+          "attended_sessions": 2024,
+          "eligible_students": 301,
+          "chronically_absent_students": 38,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "period": "Sep",
+          "attendance_rate": 94.68,
+          "eligible_sessions": 2162,
+          "absence_sessions": 115,
+          "chronic_rate": 11.96,
+          "attended_sessions": 2047,
+          "eligible_students": 301,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "period": "Oct",
+          "attendance_rate": 95.28,
+          "eligible_sessions": 2162,
+          "absence_sessions": 102,
+          "chronic_rate": 11.3,
+          "attended_sessions": 2060,
+          "eligible_students": 301,
+          "chronically_absent_students": 34,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "period": "Aug",
+          "attendance_rate": 92.79,
+          "eligible_sessions": 2510,
+          "absence_sessions": 181,
+          "chronic_rate": 14.29,
+          "attended_sessions": 2329,
+          "eligible_students": 245,
+          "chronically_absent_students": 35,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "period": "Sep",
+          "attendance_rate": 93.9,
+          "eligible_sessions": 2510,
+          "absence_sessions": 153,
+          "chronic_rate": 13.47,
+          "attended_sessions": 2357,
+          "eligible_students": 245,
+          "chronically_absent_students": 33,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "period": "Oct",
+          "attendance_rate": 94.5,
+          "eligible_sessions": 2510,
+          "absence_sessions": 138,
+          "chronic_rate": 13.06,
+          "attended_sessions": 2372,
+          "eligible_students": 245,
+          "chronically_absent_students": 32,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "period": "Aug",
+          "attendance_rate": 91.92,
+          "eligible_sessions": 2858,
+          "absence_sessions": 231,
+          "chronic_rate": 15.65,
+          "attended_sessions": 2627,
+          "eligible_students": 230,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "period": "Sep",
+          "attendance_rate": 93.0,
+          "eligible_sessions": 2858,
+          "absence_sessions": 200,
+          "chronic_rate": 14.78,
+          "attended_sessions": 2658,
+          "eligible_students": 230,
+          "chronically_absent_students": 34,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "period": "Oct",
+          "attendance_rate": 93.6,
+          "eligible_sessions": 2858,
+          "absence_sessions": 183,
+          "chronic_rate": 14.35,
+          "attended_sessions": 2675,
+          "eligible_students": 230,
+          "chronically_absent_students": 33,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "period": "Aug",
+          "attendance_rate": 94.09,
+          "eligible_sessions": 2300,
+          "absence_sessions": 136,
+          "chronic_rate": 12.74,
+          "attended_sessions": 2164,
+          "eligible_students": 314,
+          "chronically_absent_students": 40,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "period": "Sep",
+          "attendance_rate": 95.22,
+          "eligible_sessions": 2300,
+          "absence_sessions": 110,
+          "chronic_rate": 11.78,
+          "attended_sessions": 2190,
+          "eligible_students": 314,
+          "chronically_absent_students": 37,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "period": "Oct",
+          "attendance_rate": 95.78,
+          "eligible_sessions": 2300,
+          "absence_sessions": 97,
+          "chronic_rate": 11.46,
+          "attended_sessions": 2203,
+          "eligible_students": 314,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "period": "Aug",
+          "attendance_rate": 93.3,
+          "eligible_sessions": 2670,
+          "absence_sessions": 179,
+          "chronic_rate": 13.95,
+          "attended_sessions": 2491,
+          "eligible_students": 258,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 140,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "period": "Sep",
+          "attendance_rate": 94.38,
+          "eligible_sessions": 2670,
+          "absence_sessions": 150,
+          "chronic_rate": 13.18,
+          "attended_sessions": 2520,
+          "eligible_students": 258,
+          "chronically_absent_students": 34,
+          "quality_excluded_source_records": 146,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "period": "Oct",
+          "attendance_rate": 94.98,
+          "eligible_sessions": 2670,
+          "absence_sessions": 134,
+          "chronic_rate": 12.79,
+          "attended_sessions": 2536,
+          "eligible_students": 258,
+          "chronically_absent_students": 33,
+          "quality_excluded_source_records": 147,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "period": "Aug",
+          "attendance_rate": 92.4,
+          "eligible_sessions": 3040,
+          "absence_sessions": 231,
+          "chronic_rate": 15.64,
+          "attended_sessions": 2809,
+          "eligible_students": 243,
+          "chronically_absent_students": 38,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "period": "Sep",
+          "attendance_rate": 93.49,
+          "eligible_sessions": 3040,
+          "absence_sessions": 198,
+          "chronic_rate": 14.81,
+          "attended_sessions": 2842,
+          "eligible_students": 243,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "period": "Oct",
+          "attendance_rate": 94.11,
+          "eligible_sessions": 3040,
+          "absence_sessions": 179,
+          "chronic_rate": 14.4,
+          "attended_sessions": 2861,
+          "eligible_students": 243,
+          "chronically_absent_students": 35,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        }
+      ]
+    },
+    {
+      "id": "PUB-RPT-NV-ATT-2026-PRIOR",
+      "report_id": "RPT-NV-ATT-2026",
+      "version": "1.0",
+      "publication_id": "PUBL-RPT-NV-ATT-2026-20260918",
+      "published_at": "2026-09-18T10:00:00Z",
+      "source_cutoff": "2026-09-17T19:00:00Z",
+      "status": "Superseded",
+      "quality_evidence_id": "EVD-REPORT-PRIOR-ATTENDANCE",
+      "measure_definition_version": "1.0",
+      "historical_use_restricted": true,
+      "historical_use_reason": "Historical Attendance publication requires separate release-evidence confirmation; the current limited-use decision cannot be applied retroactively.",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "period": "Aug",
+          "attendance_rate": 93.62,
+          "eligible_sessions": 2162,
+          "absence_sessions": 138,
+          "chronic_rate": 12.62,
+          "attended_sessions": 2024,
+          "eligible_students": 301,
+          "chronically_absent_students": 38,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "period": "Sep",
+          "attendance_rate": 94.68,
+          "eligible_sessions": 2162,
+          "absence_sessions": 115,
+          "chronic_rate": 11.96,
+          "attended_sessions": 2047,
+          "eligible_students": 301,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "period": "Aug",
+          "attendance_rate": 92.79,
+          "eligible_sessions": 2510,
+          "absence_sessions": 181,
+          "chronic_rate": 14.29,
+          "attended_sessions": 2329,
+          "eligible_students": 245,
+          "chronically_absent_students": 35,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "period": "Sep",
+          "attendance_rate": 93.9,
+          "eligible_sessions": 2510,
+          "absence_sessions": 153,
+          "chronic_rate": 13.47,
+          "attended_sessions": 2357,
+          "eligible_students": 245,
+          "chronically_absent_students": 33,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "period": "Aug",
+          "attendance_rate": 91.92,
+          "eligible_sessions": 2858,
+          "absence_sessions": 231,
+          "chronic_rate": 15.65,
+          "attended_sessions": 2627,
+          "eligible_students": 230,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "period": "Sep",
+          "attendance_rate": 93.0,
+          "eligible_sessions": 2858,
+          "absence_sessions": 200,
+          "chronic_rate": 14.78,
+          "attended_sessions": 2658,
+          "eligible_students": 230,
+          "chronically_absent_students": 34,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "period": "Aug",
+          "attendance_rate": 94.09,
+          "eligible_sessions": 2300,
+          "absence_sessions": 136,
+          "chronic_rate": 12.74,
+          "attended_sessions": 2164,
+          "eligible_students": 314,
+          "chronically_absent_students": 40,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "period": "Sep",
+          "attendance_rate": 95.22,
+          "eligible_sessions": 2300,
+          "absence_sessions": 110,
+          "chronic_rate": 11.78,
+          "attended_sessions": 2190,
+          "eligible_students": 314,
+          "chronically_absent_students": 37,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "period": "Aug",
+          "attendance_rate": 93.3,
+          "eligible_sessions": 2670,
+          "absence_sessions": 179,
+          "chronic_rate": 13.95,
+          "attended_sessions": 2491,
+          "eligible_students": 258,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 140,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "period": "Sep",
+          "attendance_rate": 94.38,
+          "eligible_sessions": 2670,
+          "absence_sessions": 150,
+          "chronic_rate": 13.18,
+          "attended_sessions": 2520,
+          "eligible_students": 258,
+          "chronically_absent_students": 34,
+          "quality_excluded_source_records": 146,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": "DQ-ATT-LIMITED-20261010"
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "period": "Aug",
+          "attendance_rate": 92.4,
+          "eligible_sessions": 3040,
+          "absence_sessions": 231,
+          "chronic_rate": 15.64,
+          "attended_sessions": 2809,
+          "eligible_students": 243,
+          "chronically_absent_students": 38,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "period": "Sep",
+          "attendance_rate": 93.49,
+          "eligible_sessions": 3040,
+          "absence_sessions": 198,
+          "chronic_rate": 14.81,
+          "attended_sessions": 2842,
+          "eligible_students": 243,
+          "chronically_absent_students": 36,
+          "quality_excluded_source_records": 0,
+          "population_unit": "Eligible student-month observations",
+          "quality_decision_id": null
+        }
+      ]
+    },
+    {
+      "id": "PUB-RPT-NV-OUTCOMES-CURRENT",
+      "report_id": "RPT-NV-OUTCOMES",
+      "version": "1.7",
+      "publication_id": "PUBL-RPT-NV-OUTCOMES-20261010",
+      "published_at": "2026-10-10T10:00:00Z",
+      "source_cutoff": "2026-10-10T08:00:00Z",
+      "status": "Published",
+      "quality_evidence_id": "EVD-QUALITY-SCENARIO-DS-K12-DEID-RESEARCH-20261009",
+      "measure_definition_version": "1.7",
+      "historical_use_restricted": false,
+      "historical_use_reason": "",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "domain": "Mathematics",
+          "participants": 290,
+          "proficiency_pct": 68.97,
+          "proficient_count": 200,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "domain": "Reading",
+          "participants": 290,
+          "proficiency_pct": 72.41,
+          "proficient_count": 210,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "domain": "Science",
+          "participants": 290,
+          "proficiency_pct": 75.52,
+          "proficient_count": 219,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "domain": "Mathematics",
+          "participants": 325,
+          "proficiency_pct": 71.38,
+          "proficient_count": 232,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "domain": "Reading",
+          "participants": 325,
+          "proficiency_pct": 74.77,
+          "proficient_count": 243,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "domain": "Science",
+          "participants": 325,
+          "proficiency_pct": 78.15,
+          "proficient_count": 254,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "domain": "Mathematics",
+          "participants": 360,
+          "proficiency_pct": 73.89,
+          "proficient_count": 266,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "domain": "Reading",
+          "participants": 360,
+          "proficiency_pct": 77.22,
+          "proficient_count": 278,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "domain": "Science",
+          "participants": 360,
+          "proficiency_pct": 80.56,
+          "proficient_count": 290,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "domain": "Mathematics",
+          "participants": 302,
+          "proficiency_pct": 71.19,
+          "proficient_count": 215,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "domain": "Reading",
+          "participants": 302,
+          "proficiency_pct": 74.5,
+          "proficient_count": 225,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "domain": "Science",
+          "participants": 302,
+          "proficiency_pct": 77.81,
+          "proficient_count": 235,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "domain": "Mathematics",
+          "participants": 338,
+          "proficiency_pct": 73.67,
+          "proficient_count": 249,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "domain": "Reading",
+          "participants": 338,
+          "proficiency_pct": 76.92,
+          "proficient_count": 260,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "domain": "Science",
+          "participants": 338,
+          "proficiency_pct": 80.18,
+          "proficient_count": 271,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "domain": "Mathematics",
+          "participants": 374,
+          "proficiency_pct": 76.2,
+          "proficient_count": 285,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "domain": "Reading",
+          "participants": 374,
+          "proficiency_pct": 79.41,
+          "proficient_count": 297,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "domain": "Science",
+          "participants": 374,
+          "proficiency_pct": 82.89,
+          "proficient_count": 310,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        }
+      ],
+      "counting_basis": "Assessment participations; not distinct students"
+    },
+    {
+      "id": "PUB-RPT-NV-OUTCOMES-PRIOR",
+      "report_id": "RPT-NV-OUTCOMES",
+      "version": "1.0",
+      "publication_id": "PUBL-RPT-NV-OUTCOMES-20260918",
+      "published_at": "2026-09-18T10:00:00Z",
+      "source_cutoff": "2026-09-17T19:00:00Z",
+      "status": "Superseded",
+      "quality_evidence_id": "EVD-REPORT-PRIOR-OUTCOMES",
+      "measure_definition_version": "1.0",
+      "historical_use_restricted": false,
+      "historical_use_reason": "",
+      "rows": [
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "domain": "Mathematics",
+          "participants": 290,
+          "proficiency_pct": 68.62,
+          "proficient_count": 199,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "domain": "Reading",
+          "participants": 290,
+          "proficiency_pct": 72.07,
+          "proficient_count": 209,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2025-26",
+          "domain": "Science",
+          "participants": 290,
+          "proficiency_pct": 75.17,
+          "proficient_count": 218,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "domain": "Mathematics",
+          "participants": 325,
+          "proficiency_pct": 71.08,
+          "proficient_count": 231,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "domain": "Reading",
+          "participants": 325,
+          "proficiency_pct": 74.46,
+          "proficient_count": 242,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2025-26",
+          "domain": "Science",
+          "participants": 325,
+          "proficiency_pct": 77.85,
+          "proficient_count": 253,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "domain": "Mathematics",
+          "participants": 360,
+          "proficiency_pct": 73.61,
+          "proficient_count": 265,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "domain": "Reading",
+          "participants": 360,
+          "proficiency_pct": 76.94,
+          "proficient_count": 277,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2025-26",
+          "domain": "Science",
+          "participants": 360,
+          "proficiency_pct": 80.28,
+          "proficient_count": 289,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "domain": "Mathematics",
+          "participants": 302,
+          "proficiency_pct": 70.86,
+          "proficient_count": 214,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "domain": "Reading",
+          "participants": 302,
+          "proficiency_pct": 74.17,
+          "proficient_count": 224,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-HS01",
+          "organization": "North Valley High School",
+          "school_year": "2026-27",
+          "domain": "Science",
+          "participants": 302,
+          "proficiency_pct": 77.48,
+          "proficient_count": 234,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "domain": "Mathematics",
+          "participants": 338,
+          "proficiency_pct": 73.37,
+          "proficient_count": 248,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "domain": "Reading",
+          "participants": 338,
+          "proficiency_pct": 76.63,
+          "proficient_count": 259,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-MS01",
+          "organization": "North Valley Middle School",
+          "school_year": "2026-27",
+          "domain": "Science",
+          "participants": 338,
+          "proficiency_pct": 79.88,
+          "proficient_count": 270,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "domain": "Mathematics",
+          "participants": 374,
+          "proficiency_pct": 75.94,
+          "proficient_count": 284,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "domain": "Reading",
+          "participants": 374,
+          "proficiency_pct": 79.14,
+          "proficient_count": 296,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        },
+        {
+          "organization_id": "ORG-NVUSD-ES01",
+          "organization": "Riverbend Elementary School",
+          "school_year": "2026-27",
+          "domain": "Science",
+          "participants": 374,
+          "proficiency_pct": 82.62,
+          "proficient_count": 309,
+          "counting_unit": "Subject assessment participation",
+          "unique_students": null
+        }
+      ],
+      "counting_basis": "Assessment participations; not distinct students"
+    }
+  ],
+  "reporting_links": {
+    "subscription_event": "contract.updated",
+    "report_event": "report.published",
+    "export_source_type": "Dataset extract — report context only, not a completed Query Run",
+    "structured_reporting_context": "v6: typed filters; fail closed on non-mappable export dimensions"
+  },
+  "reporting_assurance": {
+    "minimum_reporting_group": 10,
+    "policy": "Withhold aggregate groups below minimum underlying reporting observations; row/column controls remain enforced by the authoritative server in production.",
+    "year_comparison": "Compare like-for-like current-defined measures on authorized yearly aggregates; missing populations are unavailable, not zero.",
+    "publishing": "Consumers view approved publication evidence but cannot approve, publish, release or change a measure definition.",
+    "evidence_source": "Illustrative North Valley reporting snapshots with distinct publication, cutoff, quality and approval references."
+  },
+  "reporting_demonstrations": [
+    {
+      "id": "DEMO-RPT-01",
+      "case": "Approved current publication",
+      "item": "RPT-NV-ENROLL-2026",
+      "expected": "Current reporting permitted only under effective grant and scope"
+    },
+    {
+      "id": "DEMO-RPT-02",
+      "case": "Preserved superseded report",
+      "item": "RPT-NV-ENROLL-2026",
+      "expected": "Version 1.0 visible only after exact publication reconciliation and current authorization"
+    },
+    {
+      "id": "DEMO-RPT-03",
+      "case": "Quality-restricted historical attendance",
+      "item": "RPT-NV-ATT-2026",
+      "expected": "Historical attendance version 1.0 result rows withheld"
+    },
+    {
+      "id": "DEMO-RPT-04",
+      "case": "Returned reporting definition",
+      "item": "RPT-NV-ATT-EXCLUSION-REVIEW",
+      "expected": "No results or dashboard launch"
+    },
+    {
+      "id": "DEMO-RPT-05",
+      "case": "Unapproved metric revision",
+      "item": "RPT-NV-RESEARCH-REVIEW",
+      "expected": "Current result access blocked"
+    },
+    {
+      "id": "DEMO-RPT-06",
+      "case": "Linked dashboard on hold",
+      "item": "DASH-NV-ATT-ON-HOLD",
+      "expected": "Block dashboard and link to independent publication review"
+    },
+    {
+      "id": "DEMO-RPT-07",
+      "case": "Missing authorized annual population",
+      "item": "DASH-NV-ENROLL",
+      "expected": "Show unavailable rather than zero"
+    },
+    {
+      "id": "DEMO-RPT-08",
+      "case": "Low observation small-cell aggregate",
+      "item": "DASH-NV-ATT",
+      "expected": "Withhold affected group and disclose suppression count"
+    },
+    {
+      "id": "DEMO-RPT-09",
+      "case": "Changed grant or quality evidence",
+      "item": "DASH-NV-RESEARCH",
+      "expected": "Revalidate on reopen; do not rely on saved view permission"
+    }
+  ]
+}

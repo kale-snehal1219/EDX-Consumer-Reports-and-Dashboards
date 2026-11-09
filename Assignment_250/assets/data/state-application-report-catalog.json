@@ -1,0 +1,1378 @@
+{
+  "meta": {
+    "schema_id": "edx.state-application-report-catalog.v1",
+    "release": "2.97",
+    "as_of": "2026-09-24T23:50:00+05:30",
+    "projection_owner": "Shared Governed State Applications & Reports Projection v1.3",
+    "production_boundary": "This registry is a read-only composite projection. Application approval/federation, agreement status/evidence, report artifact production, tenant entitlement, effective access, purpose, masking/RLS and assurance remain owned by their source authorities. Consumer and Auditor never mutate source authority through this catalog.",
+    "registry_contract_hash": "a33ee68d43d5fe6e0017f26e0e5cf59689eaa4861ccc58642e70a9b571c38843"
+  },
+  "governance": {
+    "authority_rule": "Catalog visibility is not authorization. Every report open or federated application launch re-evaluates exact scope, entitlement, purpose, effective access, policy coverage, assurance and current source evidence.",
+    "application_launch_rule": "Federated launch requires current provider approval, current tenant/principal entitlement, current federated identity, sufficient assurance, exact organization scope, allowed purpose and all required effective dataset grants/policies.",
+    "report_rule": "Report artifacts are immutable, versioned governed snapshots. Open requires exact current report definition, exact definition-bound entitlement, exact tenant/institution/environment and organization scope, allowed purpose, sufficient assurance and every declared current effective dataset/policy prerequisite. Viewing a report never grants dataset/query/export access.",
+    "audit_rule": "Every eligibility review, report open and federated launch creates correlation/evidence metadata without exposing credentials or protected source payload.",
+    "agreement_launch_rule": "Applications declare exact required agreement ID/version contracts. Launch requires each current agreement projection to be Accepted, unexpired, evidence-backed, exact-version matched and not superseded without reacceptance.",
+    "agreement_authority": "Tenant Admin → Agreements & Participation current agreement projection; State Applications & Reports declares requirement only.",
+    "report_definition_rule": "Published report definitions are immutable and version/revision/hash bound. New definitions supersede rather than overwrite prior definitions; stale entitlements fail closed until explicitly rebound to the current definition contract."
+  },
+  "reports": [
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-REPORTING-ACCEPTED-2026Q3",
+      "revision": 2,
+      "report_definition_version": "1.1.0",
+      "report_definition_revision": 2,
+      "report_family_id": "RPTFAM-USAGE",
+      "report_family_name": "Usage / Performance",
+      "report_type": "Submission / Reconciliation Summary",
+      "name": "Reporting Submission Acceptance Summary",
+      "category": "Reporting Output",
+      "period": "2026 Q3",
+      "collection_id": "COLL-STAFF-LINK-2026",
+      "source_authority": "Data Engineer — State Reporting & Submission",
+      "source_object_id": "COLL-STAFF-LINK-2026",
+      "source_evidence_id": "EVID-STAFF-LINK-RECON-v3",
+      "source_lineage_ids": [
+        "EXT-STAFF-LINK-2026-v3",
+        "ACK-2026-000184"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [],
+      "min_assurance": "A1",
+      "artifact_state": "Verified",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-STATE-RPT-REPORTING-ACCEPTED-2026Q3",
+      "checksum": "SHA256:67a5c8d214f4a9144f8c0bca9bb347e2",
+      "format": "Governed HTML + evidence manifest",
+      "supersedes_definition": "1.0.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "970f8176b8279aa2792f906ae07fb7d56afd29e3a1846c1f100f59c8c11d51b8"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-DQ-READINESS-2026Q3",
+      "revision": 3,
+      "report_definition_version": "1.2.0",
+      "report_definition_revision": 3,
+      "report_family_id": "RPTFAM-DQ",
+      "report_family_name": "Data Quality",
+      "report_type": "Quality Readiness",
+      "name": "Data Quality Readiness Summary",
+      "category": "Data Quality Report",
+      "period": "2026 Q3",
+      "collection_id": null,
+      "source_authority": "Data Steward — Quality Review / Data Engineer Validation",
+      "source_object_id": "QR-K12-ATT-20260922",
+      "source_evidence_id": "EVD-DQ-ATT-20260922",
+      "source_lineage_ids": [
+        "QR-K12-ATT-20260922"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL",
+        "PUR-ATTENDANCE"
+      ],
+      "required_dataset_ids": [],
+      "min_assurance": "A1",
+      "artifact_state": "Attention",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-STATE-RPT-DQ-READINESS-2026Q3",
+      "checksum": "SHA256:4b5324c7821bd2f1ea149633f6689086",
+      "format": "Governed HTML + evidence index",
+      "supersedes_definition": "1.1.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "0edda8cb852585ce85ca484aa01f67fde792bc14c70741c74b61803ee3cbe7e9"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-ASSESSMENT-RESULTS-2026FALL",
+      "revision": 2,
+      "report_definition_version": "1.1.0",
+      "report_definition_revision": 2,
+      "report_family_id": "RPTFAM-ASSESS",
+      "report_family_name": "Assessment Results",
+      "report_type": "Assessment Summary",
+      "name": "Assessment Results Summary",
+      "category": "Assessment Results",
+      "period": "Fall 2026",
+      "collection_id": null,
+      "source_authority": "Data Engineer — Assessment Results Delivery",
+      "source_object_id": "STATE-SVC-ASSESSMENT-INBOUND-V1",
+      "source_evidence_id": "EVID-SSB-ASSESSMENT-r1",
+      "source_lineage_ids": [
+        "STATE-SVC-ASSESSMENT-INBOUND-V1"
+      ],
+      "classification": "Restricted",
+      "organization_scope_ids": [
+        "ORG-NVUSD-HS01"
+      ],
+      "allowed_purpose_ids": [
+        "PURP-STUDENT-SUPPORT",
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-STUDENT-SILVER"
+      ],
+      "min_assurance": "A2",
+      "artifact_state": "Verified",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-STATE-RPT-ASSESSMENT-RESULTS-2026FALL",
+      "checksum": "SHA256:0cf1d498884e13c73fbd0fb3503a152e",
+      "format": "Governed HTML + masked/RLS scoped result view",
+      "supersedes_definition": "1.0.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "7ff7e6dc32d630d44d6653d967b8a2650eb41ac8d482e608b0562a2d1648fc5d"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-GENERAL-ENROLLMENT-2026FALL",
+      "revision": 3,
+      "report_definition_version": "2.1.0",
+      "report_definition_revision": 3,
+      "report_family_id": "RPTFAM-GENERAL",
+      "report_family_name": "General Collection",
+      "report_type": "Enrollment / Demographic Summary",
+      "name": "General Collection Enrollment & Demographic Summary",
+      "category": "Collection Report",
+      "period": "Fall 2026",
+      "collection_id": "COLL-FALL-GENERAL-2026",
+      "source_authority": "Data Engineer — State Reporting & Submission",
+      "source_object_id": "COLL-FALL-GENERAL-2026",
+      "source_evidence_id": "EVID-FALL-GENERAL-READINESS-v2",
+      "source_lineage_ids": [
+        "COLL-FALL-GENERAL-2026",
+        "EXT-GENERAL-FALL-2026-v2"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-STUDENT-SILVER"
+      ],
+      "min_assurance": "A1",
+      "artifact_state": "Ready",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-GENERAL-ENROLLMENT-2026FALL",
+      "checksum": "SHA256:3a165f8b5f2c62dd77af66463905588a",
+      "format": "Governed HTML + scoped collection summary",
+      "supersedes_definition": "2.0.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "984999aa43120f860e4e2eaa990278e9b5a78c2aef6f4e5f408c00707158e678"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-GENERAL-MEMBERSHIP-2026FALL",
+      "revision": 2,
+      "report_definition_version": "1.3.0",
+      "report_definition_revision": 2,
+      "report_family_id": "RPTFAM-GENERAL",
+      "report_family_name": "General Collection",
+      "report_type": "Membership / Change Summary",
+      "name": "General Collection Membership Change Summary",
+      "category": "Collection Report",
+      "period": "Fall 2026",
+      "collection_id": "COLL-FALL-GENERAL-2026",
+      "source_authority": "Data Engineer — State Reporting & Submission",
+      "source_object_id": "COLL-FALL-GENERAL-2026",
+      "source_evidence_id": "EVID-ALT-COMP-FALL-GENERAL-2026-01",
+      "source_lineage_ids": [
+        "COLL-FALL-GENERAL-2026",
+        "EVID-ALT-COMP-FALL-GENERAL-2026-01"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-STUDENT-SILVER"
+      ],
+      "min_assurance": "A1",
+      "artifact_state": "Ready",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-GENERAL-MEMBERSHIP-2026FALL",
+      "checksum": "SHA256:b19658fb1d3d9506a9b38f0680623d14",
+      "format": "Governed HTML + comparison evidence",
+      "supersedes_definition": "1.2.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "e81929c66e80d7be21962f8f25289cfea95fda271c0114f5eb11fe939772bf9d"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-EARLY-PARTICIPATION-2026",
+      "revision": 2,
+      "report_definition_version": "1.4.0",
+      "report_definition_revision": 2,
+      "report_family_id": "RPTFAM-EARLY",
+      "report_family_name": "Early Learning",
+      "report_type": "Participation / Readiness Summary",
+      "name": "Early Learning Participation Summary",
+      "category": "Collection Report",
+      "period": "2026–2027",
+      "collection_id": "COLL-EARLY-LEARNING-2026",
+      "source_authority": "Data Engineer — State Reporting & Submission",
+      "source_object_id": "COLL-EARLY-LEARNING-2026",
+      "source_evidence_id": "VAL-STATE-EARLY-2026-01",
+      "source_lineage_ids": [
+        "COLL-EARLY-LEARNING-2026"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL",
+        "PUR-PROGRAM-EVAL"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-STUDENT-SILVER"
+      ],
+      "min_assurance": "A1",
+      "artifact_state": "Attention",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-EARLY-PARTICIPATION-2026",
+      "checksum": "SHA256:ea2d1b806f42f72a22f50d794853512d",
+      "format": "Governed HTML + readiness/error-check summary",
+      "supersedes_definition": "1.3.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "2f77838de1c559f5837865edd10fde7cbf77cd1b4850ebef41cc8b1b69267d17"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-TSL-COVERAGE-2026",
+      "revision": 4,
+      "report_definition_version": "3.2.0",
+      "report_definition_revision": 4,
+      "report_family_id": "RPTFAM-TSL",
+      "report_family_name": "Teacher–Student Link",
+      "report_type": "Linkage Coverage Summary",
+      "name": "Teacher–Student Link Coverage Summary",
+      "category": "Collection Report",
+      "period": "2026–2027",
+      "collection_id": "COLL-STAFF-LINK-2026",
+      "source_authority": "Data Engineer — State Reporting & Submission",
+      "source_object_id": "COLL-STAFF-LINK-2026",
+      "source_evidence_id": "EVID-STAFF-LINK-RECON-v3",
+      "source_lineage_ids": [
+        "COLL-STAFF-LINK-2026",
+        "EVID-STAFF-LINK-RECON-v3"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-STUDENT-SILVER"
+      ],
+      "min_assurance": "A1",
+      "artifact_state": "Verified",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-TSL-COVERAGE-2026",
+      "checksum": "SHA256:5086d3224651639835f1df95b335690f",
+      "format": "Governed HTML + linkage coverage evidence",
+      "supersedes_definition": "3.1.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "6b4a1d8eb47205a7334b72f1b34ae05b4da2bf23c987612eda1374b7bcac09ac"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-EXIT-OUTCOMES-2026",
+      "revision": 2,
+      "report_definition_version": "1.2.0",
+      "report_definition_revision": 2,
+      "report_family_id": "RPTFAM-EXIT",
+      "report_family_name": "Year-End / Exit",
+      "report_type": "Exit / Outcome Summary",
+      "name": "Year-End / Exit Outcomes Summary",
+      "category": "Collection Report",
+      "period": "2026–2027",
+      "collection_id": "COLL-YEAR-END-EXIT-2026",
+      "source_authority": "Data Engineer — State Reporting & Submission",
+      "source_object_id": "COLL-YEAR-END-EXIT-2026",
+      "source_evidence_id": "EVID-YEAR-END-PLANNED-2026",
+      "source_lineage_ids": [
+        "COLL-YEAR-END-EXIT-2026"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL",
+        "PUR-PROGRAM-EVAL"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-STUDENT-SILVER"
+      ],
+      "min_assurance": "A1",
+      "artifact_state": "Planned",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-EXIT-OUTCOMES-2026",
+      "checksum": "SHA256:f195667f9d1490f5889752ebf7e2e5a1",
+      "format": "Governed HTML + collection readiness summary",
+      "supersedes_definition": "1.1.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "3737481cb76ebac48581841686b23818a3e0bdf2b8bfa5eee4e393e2099c35ad"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-ATTENDANCE-CHRONIC-2026Q1",
+      "revision": 3,
+      "report_definition_version": "2.0.0",
+      "report_definition_revision": 3,
+      "report_family_id": "RPTFAM-ATT",
+      "report_family_name": "Attendance",
+      "report_type": "Attendance / Chronic Absence Summary",
+      "name": "Attendance & Chronic Absence Summary",
+      "category": "Operational Report",
+      "period": "2026 Q1",
+      "collection_id": null,
+      "source_authority": "Data Steward — Attendance / Data Engineer Validation",
+      "source_object_id": "DS-K12-ATTENDANCE-GOLD",
+      "source_evidence_id": "EVD-DQ-ATT-20260922",
+      "source_lineage_ids": [
+        "DS-K12-ATTENDANCE-GOLD"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-ATTENDANCE",
+        "PURP-STUDENT-SUPPORT"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-ATTENDANCE-GOLD"
+      ],
+      "min_assurance": "A1",
+      "artifact_state": "Current",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-ATTENDANCE-CHRONIC-2026Q1",
+      "checksum": "SHA256:11b0c80a1086a8599d44500903173ad0",
+      "format": "Governed HTML + row-scoped attendance summary",
+      "supersedes_definition": "1.9.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "5b3e34a0acf49924aa2c37449c61a12f80401fa70e9b3aa86b0d40888d5964d0"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-PROGRAM-POPULATION-2026Q1",
+      "revision": 2,
+      "report_definition_version": "1.6.0",
+      "report_definition_revision": 2,
+      "report_family_id": "RPTFAM-PROGRAM",
+      "report_family_name": "Program / Population",
+      "report_type": "Program / Population Summary",
+      "name": "Program / Population Participation Summary",
+      "category": "Program Report",
+      "period": "2026 Q1",
+      "collection_id": null,
+      "source_authority": "Data Steward — Catalog / Program Governance",
+      "source_object_id": "DS-K12-DEID-RESEARCH",
+      "source_evidence_id": "EVD-PROGRAM-POP-2026Q1",
+      "source_lineage_ids": [
+        "DS-K12-DEID-RESEARCH"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-PROGRAM-EVAL",
+        "PUR-RESEARCH"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-DEID-RESEARCH"
+      ],
+      "min_assurance": "A1",
+      "artifact_state": "Current",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-PROGRAM-POPULATION-2026Q1",
+      "checksum": "SHA256:611d7770149b77e73fa17fbe016842e2",
+      "format": "Governed HTML + de-identified population summary",
+      "supersedes_definition": "1.5.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "425c432a593f90983853bcd73feacab79c706bbc603e618f36f17fdbeda5fbc6"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-PROGRAM-RESTRICTED-DETAIL-2026Q1",
+      "revision": 1,
+      "report_definition_version": "1.0.0",
+      "report_definition_revision": 1,
+      "report_family_id": "RPTFAM-PROGRAM",
+      "report_family_name": "Program / Population",
+      "report_type": "Restricted Program Detail",
+      "name": "Program / Population Restricted Services Detail",
+      "category": "Program Report",
+      "period": "2026 Q1",
+      "collection_id": null,
+      "source_authority": "Data Steward — Program Governance",
+      "source_object_id": "DS-K12-SPED-SILVER",
+      "source_evidence_id": "EVD-PROGRAM-RESTRICTED-2026Q1",
+      "source_lineage_ids": [
+        "DS-K12-SPED-SILVER"
+      ],
+      "classification": "Restricted",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PURP-STUDENT-SUPPORT"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-SPED-SILVER"
+      ],
+      "min_assurance": "A2",
+      "artifact_state": "Current",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-PROGRAM-RESTRICTED-DETAIL-2026Q1",
+      "checksum": "SHA256:033d35c37aa1030797920718771b248d",
+      "format": "Governed HTML + restricted row-scoped detail",
+      "supersedes_definition": null,
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "2f67cd4c480da5cc26158d8b9830dc5a04bdb99e66c9c5f148ea050abef0d3b2"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-DQ-ERROR-TREND-2026Q3",
+      "revision": 2,
+      "report_definition_version": "1.1.0",
+      "report_definition_revision": 2,
+      "report_family_id": "RPTFAM-DQ",
+      "report_family_name": "Data Quality",
+      "report_type": "Error Trend Summary",
+      "name": "Data Quality Error Trend Summary",
+      "category": "Data Quality Report",
+      "period": "2026 Q3",
+      "collection_id": null,
+      "source_authority": "Data Steward — Data Quality / Data Engineer Validation",
+      "source_object_id": "VAL-STATE-PORTFOLIO-2026Q3",
+      "source_evidence_id": "EVID-DQ-ERROR-TREND-2026Q3",
+      "source_lineage_ids": [
+        "VAL-STATE-PORTFOLIO-2026Q3"
+      ],
+      "classification": "Controlled",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [],
+      "min_assurance": "A1",
+      "artifact_state": "Attention",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-DQ-ERROR-TREND-2026Q3",
+      "checksum": "SHA256:de0c3d36b84df967c8ac466cd418aa5b",
+      "format": "Governed HTML + reporting-error trend evidence",
+      "supersedes_definition": "1.0.0",
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "735ae081531ec29fea3dfa8c836b60296bcb4cbd3028c8ada91cf3eb38cd1ca0"
+    },
+    {
+      "status": "Current",
+      "current": true,
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "school_year": "2026-2027",
+      "access_operation": "query",
+      "definition_status": "Published",
+      "definition_current": true,
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "report_id": "STATE-RPT-USAGE-PERFORMANCE-2026Q3",
+      "revision": 1,
+      "report_definition_version": "1.0.0",
+      "report_definition_revision": 1,
+      "report_family_id": "RPTFAM-USAGE",
+      "report_family_name": "Usage / Performance",
+      "report_type": "Integration / Reporting Performance",
+      "name": "Integration & Reporting Performance Summary",
+      "category": "Usage / Performance Report",
+      "period": "2026 Q3",
+      "collection_id": null,
+      "source_authority": "Platform Operations / Data Engineer Monitoring",
+      "source_object_id": "MON-NVUSD-2026Q3",
+      "source_evidence_id": "EVID-USAGE-PERF-2026Q3",
+      "source_lineage_ids": [
+        "MON-NVUSD-2026Q3"
+      ],
+      "classification": "Internal",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [],
+      "min_assurance": "A1",
+      "artifact_state": "Current",
+      "generated_at": "2026-09-24T18:10:00Z",
+      "evidence_id": "EVID-RPT-USAGE-PERFORMANCE-2026Q3",
+      "checksum": "SHA256:bf44a0f82b3b0a119dfd1544242d28db",
+      "format": "Governed HTML + aggregate operational metrics",
+      "supersedes_definition": null,
+      "definition_policy": "Definition version/revision is immutable after publication. A new definition supersedes rather than overwrites the prior definition; report entitlement must bind the exact current definition contract.",
+      "item_contract_hash": "b43d0c926e7dd6ea85b080cd5f237787591f1316f96ff328b2fbc007075ea106"
+    }
+  ],
+  "applications": [
+    {
+      "application_id": "STATE-APP-LEARNING-INSIGHTS",
+      "revision": 2,
+      "name": "State Learning Insights",
+      "category": "Learning Application",
+      "status": "Approved",
+      "current": true,
+      "provider_approval_id": "APPROVAL-STATE-LEARNING-INSIGHTS-r1",
+      "approval_expires_at": "2027-06-30T23:59:59Z",
+      "approval_evidence_id": "EVID-STATE-APP-LEARNING-INSIGHTS-r1",
+      "federation_profile_id": "FED-STATE-APPS-A2",
+      "federation_state": "Ready",
+      "launch_mode": "Federated SSO",
+      "launch_origin": "https://learning-app.example",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-HS01"
+      ],
+      "allowed_role_ids": [
+        "ROLE-DATA-CONSUMER"
+      ],
+      "allowed_purpose_ids": [
+        "PURP-STUDENT-SUPPORT",
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-STUDENT-SILVER"
+      ],
+      "access_operation": "query",
+      "min_assurance": "A2",
+      "session_ttl_minutes": 45,
+      "policy_rule": "Current effective grant, exact row scope and masking/RLS remain authoritative after federated launch.",
+      "item_contract_hash": "bea29fb18d50bac377eab5c7cbc2a93c479a583d369467d747afc9bffd2fe7f7",
+      "agreement_requirements": [
+        {
+          "agreement_id": "AGR-DHA",
+          "agreement_version": "6",
+          "required_status": "Accepted",
+          "agreement_current_required": true,
+          "agreement_scope": "TENANT",
+          "evidence_required": true,
+          "requirement_type": "Base Participation"
+        },
+        {
+          "agreement_id": "AGR-LEARN",
+          "agreement_version": "4",
+          "required_status": "Accepted",
+          "agreement_current_required": true,
+          "agreement_scope": "TENANT",
+          "evidence_required": true,
+          "requirement_type": "Optional Application Opt-In"
+        }
+      ],
+      "agreement_policy_rule": "Exact agreement ID/version/current status/evidence is re-evaluated at launch and for active-session policy state.",
+      "supersedes_revision": 1,
+      "agreement_requirement_contract_revision": 1
+    },
+    {
+      "application_id": "STATE-APP-ASSESSMENT-EXPLORER",
+      "revision": 2,
+      "name": "State Assessment Results Explorer",
+      "category": "Assessment Application",
+      "status": "Approved",
+      "current": true,
+      "provider_approval_id": "APPROVAL-STATE-ASSESSMENT-EXPLORER-r1",
+      "approval_expires_at": "2027-06-30T23:59:59Z",
+      "approval_evidence_id": "EVID-STATE-APP-ASSESSMENT-EXPLORER-r1",
+      "federation_profile_id": "FED-STATE-APPS-A2",
+      "federation_state": "Ready",
+      "launch_mode": "Federated SSO",
+      "launch_origin": "https://assessment-app.example",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_role_ids": [
+        "ROLE-DATA-CONSUMER"
+      ],
+      "allowed_purpose_ids": [
+        "PURP-STUDENT-SUPPORT"
+      ],
+      "required_dataset_ids": [
+        "DS-K12-ASSESSMENT-GOLD"
+      ],
+      "access_operation": "query",
+      "min_assurance": "A2",
+      "session_ttl_minutes": 30,
+      "policy_rule": "Launch is blocked unless a current assessment-result effective grant and policy coverage are present.",
+      "item_contract_hash": "64b9e359ab515be345d0b252a4649f9874db08941eef00919f7eb919fa60b420",
+      "agreement_requirements": [
+        {
+          "agreement_id": "AGR-DHA",
+          "agreement_version": "6",
+          "required_status": "Accepted",
+          "agreement_current_required": true,
+          "agreement_scope": "TENANT",
+          "evidence_required": true,
+          "requirement_type": "Base Participation"
+        }
+      ],
+      "agreement_policy_rule": "Exact agreement ID/version/current status/evidence is re-evaluated at launch and for active-session policy state.",
+      "supersedes_revision": 1,
+      "agreement_requirement_contract_revision": 1
+    },
+    {
+      "application_id": "STATE-APP-REPORTING-PORTAL",
+      "revision": 2,
+      "name": "State Reporting Portal",
+      "category": "Reporting Application",
+      "status": "Approved",
+      "current": true,
+      "provider_approval_id": "APPROVAL-STATE-REPORTING-PORTAL-r1",
+      "approval_expires_at": "2027-06-30T23:59:59Z",
+      "approval_evidence_id": "EVID-STATE-APP-REPORTING-PORTAL-r1",
+      "federation_profile_id": "FED-STATE-APPS-A2",
+      "federation_state": "Ready",
+      "launch_mode": "Federated SSO",
+      "launch_origin": "https://reporting-app.example",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_role_ids": [
+        "ROLE-DATA-CONSUMER"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "required_dataset_ids": [],
+      "access_operation": "report",
+      "min_assurance": "A2",
+      "session_ttl_minutes": 30,
+      "policy_rule": "Portal launch grants no data access; only separately authorized report artifacts are visible.",
+      "item_contract_hash": "4d17f60e49c70c8145035a936a0dac735c036ca161cedaef8e45d643d655b93c",
+      "agreement_requirements": [
+        {
+          "agreement_id": "AGR-DHA",
+          "agreement_version": "6",
+          "required_status": "Accepted",
+          "agreement_current_required": true,
+          "agreement_scope": "TENANT",
+          "evidence_required": true,
+          "requirement_type": "Base Participation"
+        }
+      ],
+      "agreement_policy_rule": "Exact agreement ID/version/current status/evidence is re-evaluated at launch and for active-session policy state.",
+      "supersedes_revision": 1,
+      "agreement_requirement_contract_revision": 1
+    }
+  ],
+  "report_entitlements": [
+    {
+      "entitlement_id": "RPTENT-NV-001",
+      "report_id": "STATE-RPT-REPORTING-ACCEPTED-2026Q3",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "report_definition_version": "1.1.0",
+      "report_definition_revision": 2,
+      "report_item_contract_hash": "970f8176b8279aa2792f906ae07fb7d56afd29e3a1846c1f100f59c8c11d51b8",
+      "evidence_id": "EVID-RPTENT-NV-001"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-002",
+      "report_id": "STATE-RPT-DQ-READINESS-2026Q3",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL",
+        "PUR-ATTENDANCE"
+      ],
+      "report_definition_version": "1.2.0",
+      "report_definition_revision": 3,
+      "report_item_contract_hash": "0edda8cb852585ce85ca484aa01f67fde792bc14c70741c74b61803ee3cbe7e9",
+      "evidence_id": "EVID-RPTENT-NV-002"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-003",
+      "report_id": "STATE-RPT-ASSESSMENT-RESULTS-2026FALL",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-HS01"
+      ],
+      "allowed_purpose_ids": [
+        "PURP-STUDENT-SUPPORT",
+        "PUR-OPERATIONAL"
+      ],
+      "report_definition_version": "1.1.0",
+      "report_definition_revision": 2,
+      "report_item_contract_hash": "7ff7e6dc32d630d44d6653d967b8a2650eb41ac8d482e608b0562a2d1648fc5d",
+      "evidence_id": "EVID-RPTENT-NV-003"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-004",
+      "report_id": "STATE-RPT-GENERAL-ENROLLMENT-2026FALL",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "report_definition_version": "2.1.0",
+      "report_definition_revision": 3,
+      "report_item_contract_hash": "984999aa43120f860e4e2eaa990278e9b5a78c2aef6f4e5f408c00707158e678",
+      "evidence_id": "EVID-RPTENT-NV-004"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-005",
+      "report_id": "STATE-RPT-GENERAL-MEMBERSHIP-2026FALL",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "report_definition_version": "1.3.0",
+      "report_definition_revision": 2,
+      "report_item_contract_hash": "e81929c66e80d7be21962f8f25289cfea95fda271c0114f5eb11fe939772bf9d",
+      "evidence_id": "EVID-RPTENT-NV-005"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-006",
+      "report_id": "STATE-RPT-EARLY-PARTICIPATION-2026",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL",
+        "PUR-PROGRAM-EVAL"
+      ],
+      "report_definition_version": "1.4.0",
+      "report_definition_revision": 2,
+      "report_item_contract_hash": "2f77838de1c559f5837865edd10fde7cbf77cd1b4850ebef41cc8b1b69267d17",
+      "evidence_id": "EVID-RPTENT-NV-006"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-007",
+      "report_id": "STATE-RPT-TSL-COVERAGE-2026",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "report_definition_version": "3.2.0",
+      "report_definition_revision": 4,
+      "report_item_contract_hash": "6b4a1d8eb47205a7334b72f1b34ae05b4da2bf23c987612eda1374b7bcac09ac",
+      "evidence_id": "EVID-RPTENT-NV-007"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-008",
+      "report_id": "STATE-RPT-EXIT-OUTCOMES-2026",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL",
+        "PUR-PROGRAM-EVAL"
+      ],
+      "report_definition_version": "1.2.0",
+      "report_definition_revision": 2,
+      "report_item_contract_hash": "3737481cb76ebac48581841686b23818a3e0bdf2b8bfa5eee4e393e2099c35ad",
+      "evidence_id": "EVID-RPTENT-NV-008"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-009",
+      "report_id": "STATE-RPT-ATTENDANCE-CHRONIC-2026Q1",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-ATTENDANCE",
+        "PURP-STUDENT-SUPPORT"
+      ],
+      "report_definition_version": "2.0.0",
+      "report_definition_revision": 3,
+      "report_item_contract_hash": "5b3e34a0acf49924aa2c37449c61a12f80401fa70e9b3aa86b0d40888d5964d0",
+      "evidence_id": "EVID-RPTENT-NV-009"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-010",
+      "report_id": "STATE-RPT-PROGRAM-POPULATION-2026Q1",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-PROGRAM-EVAL",
+        "PUR-RESEARCH"
+      ],
+      "report_definition_version": "1.6.0",
+      "report_definition_revision": 2,
+      "report_item_contract_hash": "425c432a593f90983853bcd73feacab79c706bbc603e618f36f17fdbeda5fbc6",
+      "evidence_id": "EVID-RPTENT-NV-010"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-011",
+      "report_id": "STATE-RPT-PROGRAM-RESTRICTED-DETAIL-2026Q1",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PURP-STUDENT-SUPPORT"
+      ],
+      "report_definition_version": "1.0.0",
+      "report_definition_revision": 1,
+      "report_item_contract_hash": "2f67cd4c480da5cc26158d8b9830dc5a04bdb99e66c9c5f148ea050abef0d3b2",
+      "evidence_id": "EVID-RPTENT-NV-011"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-012",
+      "report_id": "STATE-RPT-DQ-ERROR-TREND-2026Q3",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "report_definition_version": "1.1.0",
+      "report_definition_revision": 2,
+      "report_item_contract_hash": "735ae081531ec29fea3dfa8c836b60296bcb4cbd3028c8ada91cf3eb38cd1ca0",
+      "evidence_id": "EVID-RPTENT-NV-012"
+    },
+    {
+      "entitlement_id": "RPTENT-NV-013",
+      "report_id": "STATE-RPT-USAGE-PERFORMANCE-2026Q3",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+      "institution_id": "INST-NVUSD",
+      "environment_id": "PRODUCTION",
+      "organization_scope_ids": [
+        "ORG-NVUSD-ROOT"
+      ],
+      "allowed_purpose_ids": [
+        "PUR-OPERATIONAL"
+      ],
+      "report_definition_version": "1.0.0",
+      "report_definition_revision": 1,
+      "report_item_contract_hash": "b43d0c926e7dd6ea85b080cd5f237787591f1316f96ff328b2fbc007075ea106",
+      "evidence_id": "EVID-RPTENT-NV-013"
+    }
+  ],
+  "application_entitlements": [
+    {
+      "entitlement_id": "APPENT-NV-LEARNING-001",
+      "application_id": "STATE-APP-LEARNING-INSIGHTS",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "evidence_id": "EVID-APPENT-NV-LEARNING-001"
+    },
+    {
+      "entitlement_id": "APPENT-NV-ASSESSMENT-001",
+      "application_id": "STATE-APP-ASSESSMENT-EXPLORER",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "evidence_id": "EVID-APPENT-NV-ASSESSMENT-001"
+    },
+    {
+      "entitlement_id": "APPENT-NV-REPORTING-001",
+      "application_id": "STATE-APP-REPORTING-PORTAL",
+      "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+      "state": "Current",
+      "effective_from": "2026-09-01T00:00:00Z",
+      "expires_at": "2027-06-30T23:59:59Z",
+      "evidence_id": "EVID-APPENT-NV-REPORTING-001"
+    }
+  ],
+  "federated_identity": {
+    "principal_id": "USR-DEMO-NVUSD-DISTRICT-ANALYST",
+    "federation_profile_id": "FED-STATE-APPS-A2",
+    "state": "Current",
+    "assurance_level": "A2",
+    "tenant_id": "TEN-001-NORTH-VALLEY-USD",
+    "institution_id": "INST-NVUSD",
+    "environment_id": "PRODUCTION",
+    "evidence_id": "EVID-FED-STATE-APPS-NVUSD-001",
+    "valid_until": "2027-06-30T23:59:59Z"
+  },
+  "report_families": [
+    {
+      "family_id": "RPTFAM-GENERAL",
+      "name": "General Collection",
+      "description": "Collection-specific enrollment, membership and demographic reporting artifacts.",
+      "order": 10,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Engineer — State Reporting & Submission",
+      "evidence_id": "EVID-RPTFAM-GENERAL-v1",
+      "family_contract_hash": "884fa9d9220033def8dc216031cfb6477331cd2aaeb9383c8a5439293ae2b747"
+    },
+    {
+      "family_id": "RPTFAM-EARLY",
+      "name": "Early Learning",
+      "description": "Early-learning participation and readiness reporting artifacts.",
+      "order": 20,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Engineer — State Reporting & Submission",
+      "evidence_id": "EVID-RPTFAM-EARLY-v1",
+      "family_contract_hash": "ea1ba9ed2cd21d44f4dd3f38a8dfbafff2792af368b9a27588b3c07e5a567438"
+    },
+    {
+      "family_id": "RPTFAM-TSL",
+      "name": "Teacher–Student Link",
+      "description": "Teacher–student linkage coverage and collection outcome artifacts.",
+      "order": 30,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Engineer — State Reporting & Submission",
+      "evidence_id": "EVID-RPTFAM-TSL-v1",
+      "family_contract_hash": "4405cc11f5e08296edc32d41b5ffe71a08ea66f06cd96e32d20a79344394b39e"
+    },
+    {
+      "family_id": "RPTFAM-EXIT",
+      "name": "Year-End / Exit",
+      "description": "Year-end exit, completion and transition reporting artifacts.",
+      "order": 40,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Engineer — State Reporting & Submission",
+      "evidence_id": "EVID-RPTFAM-EXIT-v1",
+      "family_contract_hash": "bf18f653e9b099369e7f70936d8c0157be73be2ef2a1516d1efd81fa584cf9d7"
+    },
+    {
+      "family_id": "RPTFAM-ATT",
+      "name": "Attendance",
+      "description": "Attendance, chronic absence and attendance-quality reporting artifacts.",
+      "order": 50,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Engineer / Data Steward",
+      "evidence_id": "EVID-RPTFAM-ATT-v1",
+      "family_contract_hash": "54c92662dc39b1b1b0fe558f3ba9d4ee37736fabc22626a05c9c94a68fe34b16"
+    },
+    {
+      "family_id": "RPTFAM-PROGRAM",
+      "name": "Program / Population",
+      "description": "Program participation and governed population reporting artifacts.",
+      "order": 60,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Steward / Data Consumer",
+      "evidence_id": "EVID-RPTFAM-PROGRAM-v1",
+      "family_contract_hash": "602271965d62825a3867c9a20bab30820f462b421b0f77574a483ea4edf3eb03"
+    },
+    {
+      "family_id": "RPTFAM-DQ",
+      "name": "Data Quality",
+      "description": "Data-quality readiness, error trend and governance reporting artifacts.",
+      "order": 70,
+      "definition_version": "1.1.0",
+      "definition_revision": 2,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Steward / Data Engineer Validation",
+      "evidence_id": "EVID-RPTFAM-DQ-v2",
+      "family_contract_hash": "83ad89ecff2166f1c82543b64239aa8b371608db0c26a95e29fbb9c6ed2d02f9"
+    },
+    {
+      "family_id": "RPTFAM-USAGE",
+      "name": "Usage / Performance",
+      "description": "Submission, integration, service and platform performance reporting artifacts.",
+      "order": 80,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Engineer / Platform Operations",
+      "evidence_id": "EVID-RPTFAM-USAGE-v1",
+      "family_contract_hash": "7667b5008d61a05f4df7f58d6052ed05affdc1bb35435c8e3eb94bcfff768560"
+    },
+    {
+      "family_id": "RPTFAM-ASSESS",
+      "name": "Assessment Results",
+      "description": "Governed assessment result summary artifacts.",
+      "order": 90,
+      "definition_version": "1.0.0",
+      "definition_revision": 1,
+      "status": "Current",
+      "current": true,
+      "owner": "Data Engineer — Assessment Results Delivery",
+      "evidence_id": "EVID-RPTFAM-ASSESS-v1",
+      "family_contract_hash": "adde6826f023c4490912c53583a4269046c959d53a29836742988daf4f8a7aba"
+    }
+  ],
+  "report_definition_history": [
+    {
+      "history_id": "STATE-RPT-GENERAL-ENROLLMENT-2026FALL:v2.0.0:r2",
+      "report_id": "STATE-RPT-GENERAL-ENROLLMENT-2026FALL",
+      "report_family_id": "RPTFAM-GENERAL",
+      "report_definition_version": "2.0.0",
+      "report_definition_revision": 2,
+      "status": "Superseded",
+      "current": false,
+      "effective_from": "2026-07-01T00:00:00Z",
+      "effective_to": "2026-09-01T00:00:00Z",
+      "evidence_id": "EVID-RPTDEF-GENERAL-ENROLL-v2",
+      "change_summary": "Superseded by v2.1 to add governed comparison evidence and exact access-binding semantics.",
+      "definition_contract_hash": "2ed5b114bd0e484bda9610e623a0928cbe7de2ea091f9922dd9d58315f33bd29"
+    },
+    {
+      "history_id": "STATE-RPT-EARLY-PARTICIPATION-2026:v1.3.0:r1",
+      "report_id": "STATE-RPT-EARLY-PARTICIPATION-2026",
+      "report_family_id": "RPTFAM-EARLY",
+      "report_definition_version": "1.3.0",
+      "report_definition_revision": 1,
+      "status": "Superseded",
+      "current": false,
+      "effective_from": "2026-07-01T00:00:00Z",
+      "effective_to": "2026-09-01T00:00:00Z",
+      "evidence_id": "EVID-RPTDEF-EARLY-v13",
+      "change_summary": "Superseded by v1.4 to bind reporting Error Check readiness.",
+      "definition_contract_hash": "7079713dc22689b760817f26b91150bd0264e485d0987ef6845ee912083831e2"
+    },
+    {
+      "history_id": "STATE-RPT-ATTENDANCE-CHRONIC-2026Q1:v1.9.0:r2",
+      "report_id": "STATE-RPT-ATTENDANCE-CHRONIC-2026Q1",
+      "report_family_id": "RPTFAM-ATT",
+      "report_definition_version": "1.9.0",
+      "report_definition_revision": 2,
+      "status": "Superseded",
+      "current": false,
+      "effective_from": "2026-07-01T00:00:00Z",
+      "effective_to": "2026-09-01T00:00:00Z",
+      "evidence_id": "EVID-RPTDEF-ATT-v19",
+      "change_summary": "Superseded by v2.0 to require current Attendance Gold effective access.",
+      "definition_contract_hash": "8c404c78fb5e3dd7c7bf090c31ffdc50144c9684e9768f466f7a1d110d208721"
+    },
+    {
+      "history_id": "STATE-RPT-DQ-READINESS-2026Q3:v1.1.0:r2",
+      "report_id": "STATE-RPT-DQ-READINESS-2026Q3",
+      "report_family_id": "RPTFAM-DQ",
+      "report_definition_version": "1.1.0",
+      "report_definition_revision": 2,
+      "status": "Superseded",
+      "current": false,
+      "effective_from": "2026-07-01T00:00:00Z",
+      "effective_to": "2026-09-01T00:00:00Z",
+      "evidence_id": "EVID-RPTDEF-DQ-READINESS-v11",
+      "change_summary": "Superseded by v1.2 to align exact quality-review evidence.",
+      "definition_contract_hash": "29cfbd3299435cadd350fff8621d0570b92a0e1102618f5ae8d817e0d52b4a31"
+    },
+    {
+      "history_id": "STATE-RPT-REPORTING-ACCEPTED-2026Q3:v1.0.0:r1",
+      "report_id": "STATE-RPT-REPORTING-ACCEPTED-2026Q3",
+      "report_family_id": "RPTFAM-USAGE",
+      "report_definition_version": "1.0.0",
+      "report_definition_revision": 1,
+      "status": "Superseded",
+      "current": false,
+      "effective_from": "2026-07-01T00:00:00Z",
+      "effective_to": "2026-09-01T00:00:00Z",
+      "evidence_id": "EVID-RPTDEF-SUBMISSION-v10",
+      "change_summary": "Superseded by v1.1 to bind acknowledgement/reconciliation evidence.",
+      "definition_contract_hash": "6006ac38e87026dc7d9945b83735bfa580dd5feb72e785b6af9e1ac6edd518e4"
+    }
+  ],
+  "report_attention_bindings": [
+    {
+      "report_id": "STATE-RPT-GENERAL-ENROLLMENT-2026FALL",
+      "reporting_alert_refs": [
+        "RPTALT-GENERAL-FRESH-20260924",
+        "RPTALT-GENERAL-DEADLINE-20260924"
+      ],
+      "policy": "Read-only attention; does not modify report definition or entitlement."
+    },
+    {
+      "report_id": "STATE-RPT-GENERAL-MEMBERSHIP-2026FALL",
+      "reporting_alert_refs": [
+        "RPTALT-GENERAL-FRESH-20260924",
+        "RPTALT-GENERAL-DEADLINE-20260924"
+      ],
+      "policy": "Read-only attention; does not modify report definition or entitlement."
+    },
+    {
+      "report_id": "STATE-RPT-EARLY-PARTICIPATION-2026",
+      "reporting_alert_refs": [
+        "RPTALT-EL-ERRORS-20260924",
+        "RPTALT-EL-READINESS-20260924",
+        "RPTALT-EL-STUDENTID-20260924"
+      ],
+      "policy": "Read-only attention; does not modify report definition or entitlement."
+    },
+    {
+      "report_id": "STATE-RPT-TSL-COVERAGE-2026",
+      "reporting_alert_refs": [
+        "RPTALT-STAFF-ACK-20260920"
+      ],
+      "policy": "Read-only historical attention; does not modify report definition or entitlement."
+    },
+    {
+      "report_id": "STATE-RPT-DQ-READINESS-2026Q3",
+      "reporting_alert_refs": [
+        "RPTALT-EL-ERRORS-20260924",
+        "RPTALT-EL-STUDENTID-20260924"
+      ],
+      "policy": "Read-only attention; does not modify report definition or entitlement."
+    },
+    {
+      "report_id": "STATE-RPT-DQ-ERROR-TREND-2026Q3",
+      "reporting_alert_refs": [
+        "RPTALT-EL-ERRORS-20260924"
+      ],
+      "policy": "Read-only attention; does not modify report definition or entitlement."
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "schema_id": "edx.reporting-alert-type-registry.v1",
+    "release": "2.97",
+    "version": "1.0.0",
+    "revision": 1,
+    "as_of": "2026-09-24T23:50:00+05:30",
+    "definition_owner": "Shared Reporting Alert Type Contract; Data Engineer produces events and Tenant Admin owns routing.",
+    "production_boundary": "Alert definitions are immutable shared contracts. Operational alert instances require connected source authorities in Production; Tenant Admin routes alerts but cannot alter originating reporting/identity/organization state.",
+    "registry_contract_hash": "7e7a728908819aaa1cb7dd8c226b61f146cbb90a93ed1abf6a56adc8890fe1db"
+  },
+  "alert_types": [
+    {
+      "type_id": "RPT-COLLECTION-ERROR",
+      "title": "Collection Errors",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "High",
+      "producer_authority": "Data Engineer → State Reporting & Submission",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "Blocking reporting errors or configured warning threshold reached for a governed collection.",
+      "entity_scope": "Reporting Collection",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "collection_id",
+        "validation_id",
+        "error_check_id"
+      ],
+      "required_evidence": [
+        "validation_id",
+        "error_check_id",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": true,
+      "lifecycle": "Detected → Active → Acknowledged → Resolved",
+      "type_contract_hash": "9ae5bf5a85e5b755afe13ed354a08e13e4a673eb281beb4f78d189ee26c97899"
+    },
+    {
+      "type_id": "RPT-DATA-FRESHNESS",
+      "title": "Data Freshness",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "Medium",
+      "producer_authority": "Data Engineer → Operational Monitoring",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "Required source/reporting snapshot age exceeds the governed freshness threshold.",
+      "entity_scope": "Collection / Source",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "collection_id",
+        "source_id",
+        "threshold_minutes"
+      ],
+      "required_evidence": [
+        "observed_at",
+        "last_fresh_at",
+        "threshold_minutes",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": true,
+      "lifecycle": "Detected → Active → Resolved",
+      "type_contract_hash": "aea474f2d46a828e3d3d4872474bc68ab8effa3f8d157b697ddad1dd3ddb5224"
+    },
+    {
+      "type_id": "RPT-READINESS-FAILURE",
+      "title": "Reporting Readiness Failure",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "High",
+      "producer_authority": "Data Engineer → State Reporting & Submission",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "One or more required reporting readiness gates fail for a collection.",
+      "entity_scope": "Reporting Collection",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "collection_id",
+        "failed_gate_ids"
+      ],
+      "required_evidence": [
+        "failed_gate_ids",
+        "readiness_evidence_ids",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": true,
+      "lifecycle": "Detected → Active → Resolved",
+      "type_contract_hash": "937a35fe6bc982758e7e47b4a7ddf1b04b57adb6dfd07f668a88a18288e0e200"
+    },
+    {
+      "type_id": "RPT-SUBMISSION-OVERDUE",
+      "title": "Submission Overdue",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "High",
+      "producer_authority": "Data Engineer → State Reporting & Submission",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "A required collection is not submitted by its governed due timestamp.",
+      "entity_scope": "Reporting Collection",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "collection_id",
+        "due_at"
+      ],
+      "required_evidence": [
+        "due_at",
+        "submission_state",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": true,
+      "lifecycle": "Detected → Active → Escalated → Resolved",
+      "type_contract_hash": "161e9cc263b30e1e5833e1f9e76d0f0b5b461305fe29c6b66a22b970e1842b9d"
+    },
+    {
+      "type_id": "RPT-ACK-OVERDUE",
+      "title": "Acknowledgement Overdue",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "High",
+      "producer_authority": "Data Engineer → State Reporting & Submission",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "A submitted package has no acknowledgement within the governed acknowledgement SLA.",
+      "entity_scope": "Submission Package",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "collection_id",
+        "submission_id",
+        "ack_sla_minutes"
+      ],
+      "required_evidence": [
+        "submission_id",
+        "submitted_at",
+        "ack_sla_minutes",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": false,
+      "lifecycle": "Detected → Active → Escalated → Resolved",
+      "type_contract_hash": "9bc4f03003954a1a57af2a3d20ec1ce3e5c0b6f2f356a7568e2dd726d4073f68"
+    },
+    {
+      "type_id": "RPT-DEADLINE-APPROACHING",
+      "title": "Reporting Deadline Approaching",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "Medium",
+      "producer_authority": "Data Engineer → State Reporting & Submission",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "Collection due timestamp is inside the configured notification window and collection is not Accepted.",
+      "entity_scope": "Reporting Collection",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "collection_id",
+        "due_at",
+        "warning_window_days"
+      ],
+      "required_evidence": [
+        "due_at",
+        "warning_window_days",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": true,
+      "lifecycle": "Detected → Active → Resolved / Expired",
+      "type_contract_hash": "1dbc331f393ad3936bfc559e5ddb63e20f4a1a23dca54d26bc3939db41c06ba0"
+    },
+    {
+      "type_id": "RPT-ORG-SYNC-FAILURE",
+      "title": "Organization Synchronization Failure",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "High",
+      "producer_authority": "Data Engineer operational projection of Tenant Admin organization synchronization evidence",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "Required external organization binding/synchronization is stale, failed or unresolved for reporting scope.",
+      "entity_scope": "Organization / Reporting Collection",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "organization_id",
+        "binding_revision",
+        "sync_run_id"
+      ],
+      "required_evidence": [
+        "organization_binding_id",
+        "sync_run_id",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": false,
+      "lifecycle": "Detected → Active → Resolved",
+      "type_contract_hash": "5a9e93dd13f04bd35f3221b32923df5ccb394c0db6035e1d8c2c53a5de80ece4"
+    },
+    {
+      "type_id": "RPT-STUDENT-ID-READINESS",
+      "title": "Student Identity Readiness Failure",
+      "version": "1.0.0",
+      "revision": 1,
+      "default_severity": "High",
+      "producer_authority": "Data Engineer → Identity Resolution / State Reporting projection",
+      "routing_authority": "Tenant Admin → Notifications & Webhooks",
+      "condition": "Required student identity transactions/crosswalks remain unresolved for a reporting population.",
+      "entity_scope": "Reporting Collection",
+      "dedupe_key_fields": [
+        "tenant_id",
+        "collection_id",
+        "identity_run_id"
+      ],
+      "required_evidence": [
+        "identity_run_id",
+        "unresolved_count",
+        "evidence_id"
+      ],
+      "consumer_attention_eligible": true,
+      "lifecycle": "Detected → Active → Resolved",
+      "type_contract_hash": "2e0059ca38fa92c7a6c5c1b552a44e7883948d9a696b0590a3bfa05f9caba568"
+    }
+  ]
+}

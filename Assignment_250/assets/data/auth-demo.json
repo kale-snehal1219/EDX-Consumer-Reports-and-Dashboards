@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Stakeholder mockup identities displayed directly on the EduData Exchange sign-in screen",
+  "accounts": [
+    {
+      "display_name": "Platform Administration",
+      "email": "admin@edx.demo",
+      "password": "Admin#2025!",
+      "authorized_roles": [
+        "admin"
+      ],
+      "assurance_level": "A2",
+      "scope": null
+    },
+    {
+      "display_name": "Tenant Administration",
+      "email": "tenantadmin@edx.demo",
+      "password": "Tenant#2025!",
+      "authorized_roles": [
+        "tenant-admin"
+      ],
+      "assurance_level": "A2",
+      "scope": null
+    },
+    {
+      "display_name": "Data Engineering",
+      "email": "engineer@edx.demo",
+      "password": "Engineer#2025!",
+      "authorized_roles": [
+        "engineer"
+      ],
+      "assurance_level": "A2",
+      "scope": null
+    },
+    {
+      "display_name": "Data Stewardship",
+      "email": "steward@edx.demo",
+      "password": "Steward#2025!",
+      "authorized_roles": [
+        "steward"
+      ],
+      "assurance_level": "A2",
+      "scope": null
+    },
+    {
+      "display_name": "Data Consumer",
+      "email": "consumer@edx.demo",
+      "password": "Consumer#2025!",
+      "authorized_roles": [
+        "consumer"
+      ],
+      "assurance_level": "A1",
+      "scope": null
+    },
+    {
+      "display_name": "Audit & Compliance",
+      "email": "auditor@edx.demo",
+      "password": "Auditor#2025!",
+      "authorized_roles": [
+        "auditor"
+      ],
+      "assurance_level": "A2",
+      "scope": null
+    }
+  ]
+}

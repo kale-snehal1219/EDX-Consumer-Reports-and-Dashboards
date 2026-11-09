@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportingCollection collectionId="COLL-FALL-GENERAL-2026" schoolYear="2026-2027" schemaVersion="2026-27.1">
+  <Record key="STU-1001"><StudentId>S1001</StudentId><OrganizationId>ORG-NVUSD-HS</OrganizationId><GradeLevel>09</GradeLevel><EnrollmentStatus>Active</EnrollmentStatus></Record>
+  <Record key="STU-1002"><StudentId>S1002</StudentId><OrganizationId>ORG-NVUSD-HS</OrganizationId><GradeLevel>11</GradeLevel><EnrollmentStatus>Active</EnrollmentStatus></Record>
+  <Record key="STU-1004"><StudentId>S1004</StudentId><OrganizationId>ORG-NVUSD-MS</OrganizationId><GradeLevel>08</GradeLevel><EnrollmentStatus>Inactive</EnrollmentStatus></Record>
+  <Record key="STU-1005"><StudentId>S1005</StudentId><OrganizationId>ORG-NVUSD-ES</OrganizationId><GradeLevel>05</GradeLevel><EnrollmentStatus>Active</EnrollmentStatus></Record>
+  <Record key="STU-1006"><StudentId>S1006</StudentId><OrganizationId>ORG-NVUSD-HS</OrganizationId><GradeLevel>09</GradeLevel><EnrollmentStatus>Active</EnrollmentStatus></Record>
+</ReportingCollection>
